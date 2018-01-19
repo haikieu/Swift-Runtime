@@ -30,6 +30,42 @@ public class AClass {
     fileprivate(set) lazy var name : String = { return String.init(cString: class_getName(runtimeClass))}()
     
     init(_ runtimeClass : AnyClass) { self.runtimeClass = runtimeClass }
+    
+    func createInstance() -> AnyObject {
+        return class_createInstance(runtimeClass, class_getInstanceSize(runtimeClass)) as AnyObject
+    }
+    
+    fileprivate(set) lazy var ivars : [Ivar] = {
+        var ivars = [Ivar]()
+        //Get a list of iVar
+        var ivarCount : UInt32 = 0
+        let ivarList = class_copyIvarList(runtimeClass, &ivarCount)
+        defer { ivarList?.deallocate(capacity: Int(ivarCount))}//Prevent memory leak
+        if let ivarList = ivarList {
+            for i in 0..<Int(ivarCount) {
+                let ivar = ivarList.advanced(by: i).pointee
+                ivars.append(ivar)
+            }
+        }
+        return ivars
+    }()
+    
+}
+
+class AMethod {}
+class AProperty {}
+class AIMP {}
+
+class AIvar {
+    fileprivate(set) var ivar : Ivar
+    fileprivate(set) lazy var name : String = {
+        let ivarName = ivar_getName(ivar)
+        let ivarNameStr = String.init(cString: ivarName!)
+        return ivarNameStr
+    }()
+    init(_ ivar : Ivar) {
+        self.ivar = ivar
+    }
 }
 
 public class AProtocol {
@@ -121,8 +157,5 @@ public final class Runtime {
         }
         
     }
-
-        //Runtime environment information<-----
-//    }
     
 }
