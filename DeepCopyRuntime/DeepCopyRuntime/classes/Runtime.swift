@@ -50,17 +50,87 @@ public class AClass {
         return ivars
     }()
     
+    fileprivate(set) lazy var props : [AProperty] = {
+        var props = [AProperty]()
+        var propCount : UInt32 = 0
+        let propList = class_copyPropertyList(runtimeClass, &propCount)
+        defer { propList?.deallocate(capacity: Int(propCount)) }
+        if let propList = propList {
+            for i in 0..<Int(propCount) {
+                let prop = AProperty(propList.advanced(by: i).pointee)
+                props.append(prop)
+            }
+        }
+        return props
+    }()
+    
+    fileprivate(set) lazy var methods : [AMethod] = {
+        var methods = [AMethod]()
+        var methodCount : UInt32 = 0
+        let methodList = class_copyMethodList(runtimeClass, &methodCount)
+        defer { methodList?.deallocate(capacity: Int(methodCount)) }
+        if let methodList = methodList {
+            for i in 0..<Int(methodCount) {
+                let method = AMethod(methodList.advanced(by: i).pointee)
+                methods.append(method)
+            }
+        }
+        return methods
+    }()
+
+    fileprivate(set) lazy var protocols  : [AProtocol] = {
+        var procotols = [AProtocol]()
+        var protocolCount : UInt32 = 0
+        let protocolList = class_copyProtocolList(runtimeClass, &protocolCount)
+        if let protocolList = protocolList {
+            for i in 0..<Int(protocolCount) {
+                let ptc = AProtocol(protocolList[i])
+                procotols.append(ptc)
+            }
+        }
+        return procotols
+    }()
+    
+    var objects : [AObject] {
+        var objects = [AObject]()
+        return objects
+    }
+    
+}
+class AObject{}
+class AMethod {
+    fileprivate(set) var method : Method
+    fileprivate(set) lazy var selector : Selector = { return method_getName(method)}()
+    fileprivate(set) lazy var name : String = { return NSStringFromSelector(selector)}()
+    fileprivate(set) lazy var implementation : IMP = { return method_getImplementation(method)}()
+    fileprivate(set) lazy var numberOfArgs : UInt32 = { return method_getNumberOfArguments(method)}()
+    init(_ method : Method) {
+        self.method = method
+    }
+    
+    
+}
+class AProperty {
+    fileprivate(set) var prop : objc_property_t
+    fileprivate(set) lazy var name : String = { return String(cString: property_getName(prop)) }()
+    init(_ prop : objc_property_t) {
+        self.prop = prop
+    }
 }
 
-class AMethod {}
-class AProperty {}
+class Arg {
+    var index : String!
+    var name : String!
+    var type : Any!
+}
+
 class AIMP {}
 
 class AIvar {
     fileprivate(set) var ivar : Ivar
     fileprivate(set) lazy var name : String = {
         let ivarName = ivar_getName(ivar)
-        let ivarNameStr = String.init(cString: ivarName!)
+        let ivarNameStr = String(cString: ivarName!)
         return ivarNameStr
     }()
     init(_ ivar : Ivar) {
@@ -70,7 +140,7 @@ class AIvar {
 
 public class AProtocol {
     fileprivate(set) var runtimeProtocol : Protocol
-    fileprivate(set) lazy var name : String = { return String.init(cString: protocol_getName(runtimeProtocol))}()
+    fileprivate(set) lazy var name : String = { return String(cString: protocol_getName(runtimeProtocol))}()
     
     init(_ runtimeProtocol: Protocol) { self.runtimeProtocol = runtimeProtocol }
 }
@@ -78,7 +148,7 @@ public class AProtocol {
 public class AFramework {
     fileprivate(set) var image : UnsafePointer<Int8>!
     fileprivate(set) lazy var path : String = { return String(utf8String: image) ?? "" }()
-    fileprivate(set) lazy var url : URL! = { return URL.init(string: path)}()
+    fileprivate(set) lazy var url : URL! = { return URL(string: path)}()
     init(_ image: UnsafePointer<Int8>) { self.image = image }
     
     fileprivate(set) lazy var classes : [AClass] = {
@@ -87,7 +157,7 @@ public class AFramework {
         guard let list = objc_copyClassNamesForImage(image, &count) else { return classes }
         for i in 0..<Int(count) {
             let cls = list.advanced(by: 0).pointee
-            guard let aCls = NSClassFromString(String.init(cString: cls)) else { continue }
+            guard let aCls = NSClassFromString(String(cString: cls)) else { continue }
             classes.append(AClass(aCls))
         }
         return classes
