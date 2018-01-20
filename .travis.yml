@@ -1,4 +1,5 @@
-language: swift
-osx_image: xcode8.3
-script:
-    - fastlane MyTestLane
+language: objective-c
+osx_image: xcode9.1
+xcode_project: DeepCopyRuntime.xcodeproj
+xcode_scheme: SwiftRuntime
+xcode_sdk: iphonesimulator8.0

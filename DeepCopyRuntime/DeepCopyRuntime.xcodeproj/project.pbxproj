@@ -260,6 +260,7 @@
 					357AAD742012CEA000190EE9 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						TestTargetID = 35F1757F201016CC001CC862;
 					};
 					35F1757F201016CC001CC862 = {
 						CreatedOnToolsVersion = 9.2;
@@ -443,6 +444,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeepCopyRuntime.app/DeepCopyRuntime";
 			};
 			name = Debug;
 		};
@@ -458,6 +460,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeepCopyRuntime.app/DeepCopyRuntime";
 			};
 			name = Release;
 		};
