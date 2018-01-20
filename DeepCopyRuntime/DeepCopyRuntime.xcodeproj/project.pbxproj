@@ -7,15 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		357AAD762012CEA000190EE9 /* SwiftRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 357AAD6D2012CEA000190EE9 /* SwiftRuntime.framework */; };
+		357AAD7D2012CEA000190EE9 /* SwiftRuntimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357AAD7C2012CEA000190EE9 /* SwiftRuntimeTests.swift */; };
+		357AAD7F2012CEA000190EE9 /* SwiftRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = 357AAD6F2012CEA000190EE9 /* SwiftRuntime.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		357AAD822012CEA000190EE9 /* SwiftRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 357AAD6D2012CEA000190EE9 /* SwiftRuntime.framework */; };
+		357AAD832012CEA000190EE9 /* SwiftRuntime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 357AAD6D2012CEA000190EE9 /* SwiftRuntime.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		357AAD8C2012D08C00190EE9 /* Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F362852012596E00385344 /* Runtime.swift */; };
+		357AAD8E2012D3C600190EE9 /* ClassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357AAD8D2012D3C600190EE9 /* ClassTests.swift */; };
 		35F17584201016CC001CC862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F17583201016CC001CC862 /* AppDelegate.swift */; };
 		35F17586201016CC001CC862 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F17585201016CC001CC862 /* ViewController.swift */; };
 		35F17589201016CC001CC862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F17587201016CC001CC862 /* Main.storyboard */; };
 		35F1758B201016CC001CC862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35F1758A201016CC001CC862 /* Assets.xcassets */; };
 		35F1758E201016CC001CC862 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F1758C201016CC001CC862 /* LaunchScreen.storyboard */; };
-		35F362862012596E00385344 /* Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F362852012596E00385344 /* Runtime.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		357AAD772012CEA000190EE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35F17578201016CC001CC862 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 357AAD6C2012CEA000190EE9;
+			remoteInfo = SwiftRuntime;
+		};
+		357AAD792012CEA000190EE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35F17578201016CC001CC862 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35F1757F201016CC001CC862;
+			remoteInfo = DeepCopyRuntime;
+		};
+		357AAD802012CEA000190EE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35F17578201016CC001CC862 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 357AAD6C2012CEA000190EE9;
+			remoteInfo = SwiftRuntime;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		357AAD892012CEA000190EE9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				357AAD832012CEA000190EE9 /* SwiftRuntime.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		357AAD6D2012CEA000190EE9 /* SwiftRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		357AAD6F2012CEA000190EE9 /* SwiftRuntime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftRuntime.h; sourceTree = "<group>"; };
+		357AAD702012CEA000190EE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		357AAD752012CEA000190EE9 /* SwiftRuntimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftRuntimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		357AAD7C2012CEA000190EE9 /* SwiftRuntimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRuntimeTests.swift; sourceTree = "<group>"; };
+		357AAD7E2012CEA000190EE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		357AAD8D2012D3C600190EE9 /* ClassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassTests.swift; sourceTree = "<group>"; };
 		35F17580201016CC001CC862 /* DeepCopyRuntime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepCopyRuntime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F17583201016CC001CC862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35F17585201016CC001CC862 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -23,24 +74,70 @@
 		35F1758A201016CC001CC862 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35F1758D201016CC001CC862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35F1758F201016CC001CC862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		35F362852012596E00385344 /* Runtime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Runtime.swift; path = classes/Runtime.swift; sourceTree = "<group>"; };
+		35F362852012596E00385344 /* Runtime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Runtime.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		35F1757D201016CC001CC862 /* Frameworks */ = {
+		357AAD692012CEA000190EE9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		357AAD722012CEA000190EE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				357AAD762012CEA000190EE9 /* SwiftRuntime.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35F1757D201016CC001CC862 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				357AAD822012CEA000190EE9 /* SwiftRuntime.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		357AAD6E2012CEA000190EE9 /* SwiftRuntime */ = {
+			isa = PBXGroup;
+			children = (
+				357AAD8B2012CEA800190EE9 /* classes */,
+				357AAD6F2012CEA000190EE9 /* SwiftRuntime.h */,
+				357AAD702012CEA000190EE9 /* Info.plist */,
+			);
+			path = SwiftRuntime;
+			sourceTree = "<group>";
+		};
+		357AAD7B2012CEA000190EE9 /* SwiftRuntimeTests */ = {
+			isa = PBXGroup;
+			children = (
+				357AAD7C2012CEA000190EE9 /* SwiftRuntimeTests.swift */,
+				357AAD7E2012CEA000190EE9 /* Info.plist */,
+				357AAD8D2012D3C600190EE9 /* ClassTests.swift */,
+			);
+			path = SwiftRuntimeTests;
+			sourceTree = "<group>";
+		};
+		357AAD8B2012CEA800190EE9 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				35F362852012596E00385344 /* Runtime.swift */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
 		35F17577201016CC001CC862 = {
 			isa = PBXGroup;
 			children = (
 				35F17582201016CC001CC862 /* DeepCopyRuntime */,
+				357AAD6E2012CEA000190EE9 /* SwiftRuntime */,
+				357AAD7B2012CEA000190EE9 /* SwiftRuntimeTests */,
 				35F17581201016CC001CC862 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				35F17580201016CC001CC862 /* DeepCopyRuntime.app */,
+				357AAD6D2012CEA000190EE9 /* SwiftRuntime.framework */,
+				357AAD752012CEA000190EE9 /* SwiftRuntimeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,14 +169,61 @@
 		35F362842012596500385344 /* classes */ = {
 			isa = PBXGroup;
 			children = (
-				35F362852012596E00385344 /* Runtime.swift */,
 			);
 			name = classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		357AAD6A2012CEA000190EE9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				357AAD7F2012CEA000190EE9 /* SwiftRuntime.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		357AAD6C2012CEA000190EE9 /* SwiftRuntime */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 357AAD882012CEA000190EE9 /* Build configuration list for PBXNativeTarget "SwiftRuntime" */;
+			buildPhases = (
+				357AAD682012CEA000190EE9 /* Sources */,
+				357AAD692012CEA000190EE9 /* Frameworks */,
+				357AAD6A2012CEA000190EE9 /* Headers */,
+				357AAD6B2012CEA000190EE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftRuntime;
+			productName = SwiftRuntime;
+			productReference = 357AAD6D2012CEA000190EE9 /* SwiftRuntime.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		357AAD742012CEA000190EE9 /* SwiftRuntimeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 357AAD8A2012CEA000190EE9 /* Build configuration list for PBXNativeTarget "SwiftRuntimeTests" */;
+			buildPhases = (
+				357AAD712012CEA000190EE9 /* Sources */,
+				357AAD722012CEA000190EE9 /* Frameworks */,
+				357AAD732012CEA000190EE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				357AAD782012CEA000190EE9 /* PBXTargetDependency */,
+				357AAD7A2012CEA000190EE9 /* PBXTargetDependency */,
+			);
+			name = SwiftRuntimeTests;
+			productName = SwiftRuntimeTests;
+			productReference = 357AAD752012CEA000190EE9 /* SwiftRuntimeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		35F1757F201016CC001CC862 /* DeepCopyRuntime */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35F17592201016CC001CC862 /* Build configuration list for PBXNativeTarget "DeepCopyRuntime" */;
@@ -85,10 +231,12 @@
 				35F1757C201016CC001CC862 /* Sources */,
 				35F1757D201016CC001CC862 /* Frameworks */,
 				35F1757E201016CC001CC862 /* Resources */,
+				357AAD892012CEA000190EE9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				357AAD812012CEA000190EE9 /* PBXTargetDependency */,
 			);
 			name = DeepCopyRuntime;
 			productName = DeepCopyRuntime;
@@ -105,6 +253,14 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "haikieu2907@icloud.com";
 				TargetAttributes = {
+					357AAD6C2012CEA000190EE9 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					357AAD742012CEA000190EE9 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					35F1757F201016CC001CC862 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -125,11 +281,27 @@
 			projectRoot = "";
 			targets = (
 				35F1757F201016CC001CC862 /* DeepCopyRuntime */,
+				357AAD6C2012CEA000190EE9 /* SwiftRuntime */,
+				357AAD742012CEA000190EE9 /* SwiftRuntimeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		357AAD6B2012CEA000190EE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		357AAD732012CEA000190EE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		35F1757E201016CC001CC862 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -143,17 +315,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		357AAD682012CEA000190EE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				357AAD8C2012D08C00190EE9 /* Runtime.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		357AAD712012CEA000190EE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				357AAD8E2012D3C600190EE9 /* ClassTests.swift in Sources */,
+				357AAD7D2012CEA000190EE9 /* SwiftRuntimeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		35F1757C201016CC001CC862 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				35F17586201016CC001CC862 /* ViewController.swift in Sources */,
-				35F362862012596E00385344 /* Runtime.swift in Sources */,
 				35F17584201016CC001CC862 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		357AAD782012CEA000190EE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 357AAD6C2012CEA000190EE9 /* SwiftRuntime */;
+			targetProxy = 357AAD772012CEA000190EE9 /* PBXContainerItemProxy */;
+		};
+		357AAD7A2012CEA000190EE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 35F1757F201016CC001CC862 /* DeepCopyRuntime */;
+			targetProxy = 357AAD792012CEA000190EE9 /* PBXContainerItemProxy */;
+		};
+		357AAD812012CEA000190EE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 357AAD6C2012CEA000190EE9 /* SwiftRuntime */;
+			targetProxy = 357AAD802012CEA000190EE9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		35F17587201016CC001CC862 /* Main.storyboard */ = {
@@ -175,6 +381,86 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		357AAD842012CEA000190EE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = P3SL8HVN4S;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SwiftRuntime/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hk.lib.SwiftRuntime;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		357AAD852012CEA000190EE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = P3SL8HVN4S;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SwiftRuntime/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hk.lib.SwiftRuntime;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		357AAD862012CEA000190EE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P3SL8HVN4S;
+				INFOPLIST_FILE = SwiftRuntimeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hk.lib.SwiftRuntimeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		357AAD872012CEA000190EE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P3SL8HVN4S;
+				INFOPLIST_FILE = SwiftRuntimeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hk.lib.SwiftRuntimeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		35F17590201016CC001CC862 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -285,10 +571,12 @@
 		35F17593201016CC001CC862 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P3SL8HVN4S;
 				INFOPLIST_FILE = DeepCopyRuntime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hk.demo.DeepCopyRuntime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -300,10 +588,12 @@
 		35F17594201016CC001CC862 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P3SL8HVN4S;
 				INFOPLIST_FILE = DeepCopyRuntime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hk.demo.DeepCopyRuntime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -315,6 +605,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		357AAD882012CEA000190EE9 /* Build configuration list for PBXNativeTarget "SwiftRuntime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				357AAD842012CEA000190EE9 /* Debug */,
+				357AAD852012CEA000190EE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		357AAD8A2012CEA000190EE9 /* Build configuration list for PBXNativeTarget "SwiftRuntimeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				357AAD862012CEA000190EE9 /* Debug */,
+				357AAD872012CEA000190EE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		35F1757B201016CC001CC862 /* Build configuration list for PBXProject "DeepCopyRuntime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

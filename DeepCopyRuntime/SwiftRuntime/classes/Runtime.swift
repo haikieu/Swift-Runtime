@@ -21,36 +21,40 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
- 
+
 import Foundation
 
 public class AClass {
     
-    init(_ runtimeClass : AnyClass) { self.runtimeClass = runtimeClass }
-    static func from(className: String) -> AClass? {
+    public init(_ runtimeClass : AnyClass) { self.runtimeClass = runtimeClass }
+    open class func from(className: String) -> AClass? {
         guard let cls = NSClassFromString(className) else { return nil }
         return AClass(cls)
     }
     
-    func createInstance() -> AnyObject {
+    public func createInstance() -> AnyObject {
         return class_createInstance(runtimeClass, class_getInstanceSize(runtimeClass)) as AnyObject
     }
     
-    fileprivate(set) var runtimeClass : AnyClass
+    open static func instantiate(from cls:AnyClass) -> AnyObject {
+        return class_createInstance(cls, class_getInstanceSize(cls)) as AnyObject
+    }
     
-    fileprivate(set) lazy var baseClass : AClass? = {
+    public fileprivate(set) var runtimeClass : AnyClass
+    
+    public fileprivate(set) lazy var baseClass : AClass? = {
         guard let cls = class_getSuperclass(runtimeClass) else { return nil}
         return AClass(cls)
     }()
     
-    fileprivate(set) lazy var framework : AFramework? = {
+    public fileprivate(set) lazy var framework : AFramework? = {
         guard let image = class_getImageName(runtimeClass) else { return nil }
         return AFramework(image)
     }()
     
-    fileprivate(set) lazy var name : String = { return String(cString: class_getName(runtimeClass))}()
+    public fileprivate(set) lazy var name : String = { return String(cString: class_getName(runtimeClass))}()
     
-    fileprivate(set) lazy var ivars : [Ivar] = {
+    public fileprivate(set) lazy var ivars : [Ivar] = {
         var ivars = [Ivar]()
         //Get a list of iVar
         var ivarCount : UInt32 = 0
@@ -65,7 +69,7 @@ public class AClass {
         return ivars
     }()
     
-    fileprivate(set) lazy var props : [AProperty] = {
+    public fileprivate(set) lazy var props : [AProperty] = {
         var props = [AProperty]()
         var propCount : UInt32 = 0
         let propList = class_copyPropertyList(runtimeClass, &propCount)
@@ -79,7 +83,7 @@ public class AClass {
         return props
     }()
     
-    fileprivate(set) lazy var methods : [AMethod] = {
+    public fileprivate(set) lazy var methods : [AMethod] = {
         var methods = [AMethod]()
         var methodCount : UInt32 = 0
         let methodList = class_copyMethodList(runtimeClass, &methodCount)
@@ -93,7 +97,7 @@ public class AClass {
         return methods
     }()
 
-    fileprivate(set) lazy var protocols  : [AProtocol] = {
+    public fileprivate(set) lazy var protocols  : [AProtocol] = {
         var procotols = [AProtocol]()
         var protocolCount : UInt32 = 0
         let protocolList = class_copyProtocolList(runtimeClass, &protocolCount)
@@ -106,69 +110,69 @@ public class AClass {
         return procotols
     }()
     
-    var objects : [AObject] {
+    public var objects : [AObject] {
         var objects = [AObject]()
         return objects
     }
     
 }
-class AObject{}
-class AMethod {
-    fileprivate(set) var method : Method
-    fileprivate(set) lazy var selector : Selector = { return method_getName(method)}()
-    fileprivate(set) lazy var name : String = { return NSStringFromSelector(selector)}()
-    fileprivate(set) lazy var implementation : IMP = { return method_getImplementation(method)}()
-    fileprivate(set) lazy var numberOfArgs : UInt32 = { return method_getNumberOfArguments(method)}()
-    init(_ method : Method) {
+public class AObject{}
+public class AMethod {
+    public fileprivate(set) var method : Method
+    public fileprivate(set) lazy var selector : Selector = { return method_getName(method)}()
+    public fileprivate(set) lazy var name : String = { return NSStringFromSelector(selector)}()
+    public fileprivate(set) lazy var implementation : IMP = { return method_getImplementation(method)}()
+    public fileprivate(set) lazy var numberOfArgs : UInt32 = { return method_getNumberOfArguments(method)}()
+    public init(_ method : Method) {
         self.method = method
     }
     
     
 }
-class AProperty {
-    fileprivate(set) var prop : objc_property_t
-    fileprivate(set) lazy var name : String = { return String(cString: property_getName(prop)) }()
+public class AProperty {
+    public fileprivate(set) var prop : objc_property_t
+    public fileprivate(set) lazy var name : String = { return String(cString: property_getName(prop)) }()
     init(_ prop : objc_property_t) {
         self.prop = prop
         
     }
 }
 
-class Arg {
-    var index : String!
-    var name : String!
-    var type : Any!
+public class Arg {
+    public var index : String!
+    public var name : String!
+    public var type : Any!
 }
 
-class AIMP {}
+public class AIMP {}
 
-class AIvar {
-    fileprivate(set) var ivar : Ivar
-    fileprivate(set) lazy var name : String = {
+public class AIvar {
+    public fileprivate(set) var ivar : Ivar
+    public fileprivate(set) lazy var name : String = {
         let ivarName = ivar_getName(ivar)
         let ivarNameStr = String(cString: ivarName!)
         return ivarNameStr
     }()
-    init(_ ivar : Ivar) {
+    public init(_ ivar : Ivar) {
         self.ivar = ivar
     }
 }
 
 public class AProtocol {
-    fileprivate(set) var runtimeProtocol : Protocol
-    fileprivate(set) lazy var name : String = { return String(cString: protocol_getName(runtimeProtocol))}()
+    public fileprivate(set) var runtimeProtocol : Protocol
+    public fileprivate(set) lazy var name : String = { return String(cString: protocol_getName(runtimeProtocol))}()
     
-    init(_ runtimeProtocol: Protocol) { self.runtimeProtocol = runtimeProtocol }
+    public init(_ runtimeProtocol: Protocol) { self.runtimeProtocol = runtimeProtocol }
 }
 
 public class AFramework {
-    fileprivate(set) var image : UnsafePointer<Int8>!
-    fileprivate(set) lazy var path : String = { return String(utf8String: image) ?? "" }()
-    fileprivate(set) lazy var url : URL! = { return URL(string: path)}()
-    fileprivate(set) lazy var name : String = { return url.lastPathComponent }()
-    init(_ image: UnsafePointer<Int8>) { self.image = image }
+    public fileprivate(set) var image : UnsafePointer<Int8>!
+    public fileprivate(set) lazy var path : String = { return String(utf8String: image) ?? "" }()
+    public fileprivate(set) lazy var url : URL! = { return URL(string: path)}()
+    public fileprivate(set) lazy var name : String = { return url.lastPathComponent }()
+    public init(_ image: UnsafePointer<Int8>) { self.image = image }
     
-    fileprivate(set) lazy var classes : [AClass] = {
+    public fileprivate(set) lazy var classes : [AClass] = {
         var classes = [AClass]()
         var count : UInt32 = 0
         guard let list = objc_copyClassNamesForImage(image, &count) else { return classes }
@@ -180,7 +184,7 @@ public class AFramework {
         return classes
     }()
     
-    func dyload() -> Bool {
+    public func dyload() -> Bool {
         
         guard dlopen_preflight(image) else {
             //https://www.unix.com/man-page/osx/3/dlopen_preflight/
@@ -206,10 +210,10 @@ public class AFramework {
 }
 
 public final class Runtime {
-    static let environment = Runtime()
+    public static let environment = Runtime()
     
     ///List of registered classes in runtime
-    fileprivate(set) lazy var classes : [AClass] = {
+    public fileprivate(set) lazy var classes : [AClass] = {
         var classes = [AClass]()
         var clsCount : UInt32 = 0
         let clsList = objc_copyClassList(&clsCount)
@@ -221,14 +225,14 @@ public final class Runtime {
         }
     }()
     
-    func listClassNames() {
+    public func listClassNames() {
         for (i, aClass) in classes.enumerated() {
             print("\(i). class \(aClass.name)")
         }
     }
     
     ///List of registered classes in runtime
-    fileprivate(set) lazy var protocols : [AProtocol] = {
+    public fileprivate(set) lazy var protocols : [AProtocol] = {
         var protocols = [AProtocol]()
         
         var pCount : UInt32 = 0
@@ -240,13 +244,13 @@ public final class Runtime {
         } else { return [] }
     }()
     
-    func listProtocols() {
+    public func listProtocols() {
         for (i, aProtocol) in protocols.enumerated() {
             print("\(i). protocol \(aProtocol.name)")
         }
     }
   
-    fileprivate(set) lazy var frameworks : [AFramework] = {
+    public fileprivate(set) lazy var frameworks : [AFramework] = {
         var frameworks = [AFramework]()
         var fwCount : UInt32 = 0
         let fwsList = objc_copyImageNames(&fwCount)
@@ -259,7 +263,7 @@ public final class Runtime {
         return frameworks
     }()
     
-    func listFrameworks() {
+    public func listFrameworks() {
         for (i, aFramework) in frameworks.enumerated() {
             print("\(i). Framework \(aFramework.url.lastPathComponent)")
             for (i, cls) in aFramework.classes.enumerated() {
