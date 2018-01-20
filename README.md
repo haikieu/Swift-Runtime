@@ -1,5 +1,6 @@
 # Swift-Runtime-Library
 
+[![Build Status](https://travis-ci.org/haikieu/Swift-Runtime-Library.svg?branch=master)](https://travis-ci.org/haikieu/Swift-Runtime-Library)
 
 
 MIT License
