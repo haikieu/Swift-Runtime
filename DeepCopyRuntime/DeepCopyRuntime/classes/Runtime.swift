@@ -179,6 +179,30 @@ public class AFramework {
         }
         return classes
     }()
+    
+    func dyload() -> Bool {
+        
+        guard dlopen_preflight(image) else {
+            //https://www.unix.com/man-page/osx/3/dlopen_preflight/
+            //dlopen_preflight() returns true on if the mach-o file is compatible.  If the file is not
+            //compatible, it returns false and sets an error string that can be examined with dlerror().
+            if let error = dlerror() {
+                let errorStr = String.init(utf8String: error)
+                print("error")
+            }
+            return false
+        }
+        
+        guard let loadedFW = dlopen(image, RTLD_NOW) else {
+            //Cannot load
+            return false
+        }
+        defer { dlclose(loadedFW)}
+        let function = dlsym(loadedFW, "")
+        
+        return true
+        
+    }
 }
 
 public final class Runtime {
