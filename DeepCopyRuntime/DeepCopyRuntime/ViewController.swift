@@ -46,7 +46,7 @@ public extension DeepCopy where Self : AnyObject {
         let aClass = AClass(type(of: self))
         let runtimeInstance = aClass.createInstance()
         
-        
+        print("\(aClass.baseClass?.framework?.name ?? "no framework")")
         
         if let baby = runtimeInstance as? People {
             baby.name = "New instance"

@@ -26,14 +26,29 @@ import Foundation
 
 public class AClass {
     
-    fileprivate(set) var runtimeClass : AnyClass
-    fileprivate(set) lazy var name : String = { return String.init(cString: class_getName(runtimeClass))}()
-    
     init(_ runtimeClass : AnyClass) { self.runtimeClass = runtimeClass }
+    static func from(className: String) -> AClass? {
+        guard let cls = NSClassFromString(className) else { return nil }
+        return AClass(cls)
+    }
     
     func createInstance() -> AnyObject {
         return class_createInstance(runtimeClass, class_getInstanceSize(runtimeClass)) as AnyObject
     }
+    
+    fileprivate(set) var runtimeClass : AnyClass
+    
+    fileprivate(set) lazy var baseClass : AClass? = {
+        guard let cls = class_getSuperclass(runtimeClass) else { return nil}
+        return AClass(cls)
+    }()
+    
+    fileprivate(set) lazy var framework : AFramework? = {
+        guard let image = class_getImageName(runtimeClass) else { return nil }
+        return AFramework(image)
+    }()
+    
+    fileprivate(set) lazy var name : String = { return String(cString: class_getName(runtimeClass))}()
     
     fileprivate(set) lazy var ivars : [Ivar] = {
         var ivars = [Ivar]()
@@ -115,6 +130,7 @@ class AProperty {
     fileprivate(set) lazy var name : String = { return String(cString: property_getName(prop)) }()
     init(_ prop : objc_property_t) {
         self.prop = prop
+        
     }
 }
 
@@ -149,6 +165,7 @@ public class AFramework {
     fileprivate(set) var image : UnsafePointer<Int8>!
     fileprivate(set) lazy var path : String = { return String(utf8String: image) ?? "" }()
     fileprivate(set) lazy var url : URL! = { return URL(string: path)}()
+    fileprivate(set) lazy var name : String = { return url.lastPathComponent }()
     init(_ image: UnsafePointer<Int8>) { self.image = image }
     
     fileprivate(set) lazy var classes : [AClass] = {
