@@ -1,5 +1,5 @@
 language: objective-c
 osx_image: xcode9.1
-xcode_project: DeepCopyRuntime.xcodeproj
+xcode_project: ./DeepCopyRuntime/DeepCopyRuntime.xcodeproj
 xcode_scheme: SwiftRuntime
 xcode_sdk: iphonesimulator8.0
