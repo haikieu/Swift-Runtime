@@ -7,10 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		35EB29E020202A24009D0FAE /* Runtime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EB29DF20202A24009D0FAE /* Runtime.framework */; };
-		35EB29E120202A24009D0FAE /* Runtime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35EB29DF20202A24009D0FAE /* Runtime.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		35EB29E420202A29009D0FAE /* RuntimeUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EB29E320202A29009D0FAE /* RuntimeUI.framework */; };
-		35EB29E520202A29009D0FAE /* RuntimeUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35EB29E320202A29009D0FAE /* RuntimeUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		35EB2C1F2020FABD009D0FAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB2C1E2020FABD009D0FAE /* AppDelegate.swift */; };
+		35EB2C212020FABD009D0FAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB2C202020FABD009D0FAE /* ViewController.swift */; };
+		35EB2C242020FABD009D0FAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EB2C222020FABD009D0FAE /* Main.storyboard */; };
+		35EB2C262020FABD009D0FAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35EB2C252020FABD009D0FAE /* Assets.xcassets */; };
+		35EB2C312020FABD009D0FAE /* RuntimeDemoTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB2C302020FABD009D0FAE /* RuntimeDemoTVTests.swift */; };
+		35EB2C712020FC3B009D0FAE /* RuntimeTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EB2C702020FC3B009D0FAE /* RuntimeTV.framework */; };
+		35EB2C722020FC3B009D0FAE /* RuntimeTV.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35EB2C702020FC3B009D0FAE /* RuntimeTV.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		35EB2C742020FC3B009D0FAE /* RuntimeUITV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EB2C732020FC3B009D0FAE /* RuntimeUITV.framework */; };
+		35EB2C752020FC3B009D0FAE /* RuntimeUITV.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35EB2C732020FC3B009D0FAE /* RuntimeUITV.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		35EB2C772020FC45009D0FAE /* Runtime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EB2C762020FC45009D0FAE /* Runtime.framework */; };
+		35EB2C782020FC45009D0FAE /* Runtime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35EB2C762020FC45009D0FAE /* Runtime.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		35EB2C7A2020FC45009D0FAE /* RuntimeUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EB2C792020FC45009D0FAE /* RuntimeUI.framework */; };
+		35EB2C7B2020FC45009D0FAE /* RuntimeUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35EB2C792020FC45009D0FAE /* RuntimeUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		35ED02B5202022D4007A941C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED02B4202022D4007A941C /* AppDelegate.swift */; };
 		35ED02B7202022D4007A941C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED02B6202022D4007A941C /* ViewController.swift */; };
 		35ED02BA202022D4007A941C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35ED02B8202022D4007A941C /* Main.storyboard */; };
@@ -20,6 +29,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		35EB2C2D2020FABD009D0FAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35ED02A9202022D4007A941C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35EB2C1B2020FABC009D0FAE;
+			remoteInfo = RuntimeDemoTV;
+		};
 		35ED02C6202022D4007A941C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 35ED02A9202022D4007A941C /* Project object */;
@@ -36,8 +52,20 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				35EB29E120202A24009D0FAE /* Runtime.framework in Embed Frameworks */,
-				35EB29E520202A29009D0FAE /* RuntimeUI.framework in Embed Frameworks */,
+				35EB2C782020FC45009D0FAE /* Runtime.framework in Embed Frameworks */,
+				35EB2C7B2020FC45009D0FAE /* RuntimeUI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35EB2C432020FBAC009D0FAE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				35EB2C722020FC3B009D0FAE /* RuntimeTV.framework in Embed Frameworks */,
+				35EB2C752020FC3B009D0FAE /* RuntimeUITV.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,8 +73,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		35EB29DF20202A24009D0FAE /* Runtime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Runtime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		35EB29E320202A29009D0FAE /* RuntimeUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RuntimeUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35EB2C1C2020FABC009D0FAE /* RuntimeDemoTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuntimeDemoTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		35EB2C1E2020FABD009D0FAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		35EB2C202020FABD009D0FAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		35EB2C232020FABD009D0FAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		35EB2C252020FABD009D0FAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		35EB2C272020FABD009D0FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35EB2C2C2020FABD009D0FAE /* RuntimeDemoTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuntimeDemoTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		35EB2C302020FABD009D0FAE /* RuntimeDemoTVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeDemoTVTests.swift; sourceTree = "<group>"; };
+		35EB2C322020FABD009D0FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35EB2C702020FC3B009D0FAE /* RuntimeTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RuntimeTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35EB2C732020FC3B009D0FAE /* RuntimeUITV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RuntimeUITV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35EB2C762020FC45009D0FAE /* Runtime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Runtime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35EB2C792020FC45009D0FAE /* RuntimeUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RuntimeUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35ED02B1202022D4007A941C /* RuntimeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuntimeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35ED02B4202022D4007A941C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35ED02B6202022D4007A941C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,12 +99,28 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		35EB2C192020FABC009D0FAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35EB2C712020FC3B009D0FAE /* RuntimeTV.framework in Frameworks */,
+				35EB2C742020FC3B009D0FAE /* RuntimeUITV.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35EB2C292020FABD009D0FAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		35ED02AE202022D4007A941C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35EB29E020202A24009D0FAE /* Runtime.framework in Frameworks */,
-				35EB29E420202A29009D0FAE /* RuntimeUI.framework in Frameworks */,
+				35EB2C772020FC45009D0FAE /* Runtime.framework in Frameworks */,
+				35EB2C7A2020FC45009D0FAE /* RuntimeUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,13 +141,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		35EB2C1D2020FABD009D0FAE /* RuntimeDemoTV */ = {
+			isa = PBXGroup;
+			children = (
+				35EB2C1E2020FABD009D0FAE /* AppDelegate.swift */,
+				35EB2C202020FABD009D0FAE /* ViewController.swift */,
+				35EB2C222020FABD009D0FAE /* Main.storyboard */,
+				35EB2C252020FABD009D0FAE /* Assets.xcassets */,
+				35EB2C272020FABD009D0FAE /* Info.plist */,
+			);
+			path = RuntimeDemoTV;
+			sourceTree = "<group>";
+		};
+		35EB2C2F2020FABD009D0FAE /* RuntimeDemoTVTests */ = {
+			isa = PBXGroup;
+			children = (
+				35EB2C302020FABD009D0FAE /* RuntimeDemoTVTests.swift */,
+				35EB2C322020FABD009D0FAE /* Info.plist */,
+			);
+			path = RuntimeDemoTVTests;
+			sourceTree = "<group>";
+		};
 		35ED02A8202022D4007A941C = {
 			isa = PBXGroup;
 			children = (
-				35EB29E320202A29009D0FAE /* RuntimeUI.framework */,
-				35EB29DF20202A24009D0FAE /* Runtime.framework */,
+				35EB2C792020FC45009D0FAE /* RuntimeUI.framework */,
+				35EB2C762020FC45009D0FAE /* Runtime.framework */,
+				35EB2C732020FC3B009D0FAE /* RuntimeUITV.framework */,
+				35EB2C702020FC3B009D0FAE /* RuntimeTV.framework */,
 				35ED02B3202022D4007A941C /* RuntimeDemo */,
 				35ED02C8202022D4007A941C /* RuntimeDemoTests */,
+				35EB2C1D2020FABD009D0FAE /* RuntimeDemoTV */,
+				35EB2C2F2020FABD009D0FAE /* RuntimeDemoTVTests */,
 				35EB29E620202AD3009D0FAE /* Frameworks */,
 				35ED02B2202022D4007A941C /* Products */,
 			);
@@ -103,6 +183,8 @@
 			children = (
 				35ED02B1202022D4007A941C /* RuntimeDemo.app */,
 				35ED02C5202022D4007A941C /* RuntimeDemoTests.xctest */,
+				35EB2C1C2020FABC009D0FAE /* RuntimeDemoTV.app */,
+				35EB2C2C2020FABD009D0FAE /* RuntimeDemoTVTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,6 +214,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		35EB2C1B2020FABC009D0FAE /* RuntimeDemoTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35EB2C332020FABD009D0FAE /* Build configuration list for PBXNativeTarget "RuntimeDemoTV" */;
+			buildPhases = (
+				35EB2C182020FABC009D0FAE /* Sources */,
+				35EB2C192020FABC009D0FAE /* Frameworks */,
+				35EB2C1A2020FABC009D0FAE /* Resources */,
+				35EB2C432020FBAC009D0FAE /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RuntimeDemoTV;
+			productName = RuntimeDemoTV;
+			productReference = 35EB2C1C2020FABC009D0FAE /* RuntimeDemoTV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		35EB2C2B2020FABD009D0FAE /* RuntimeDemoTVTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35EB2C362020FABD009D0FAE /* Build configuration list for PBXNativeTarget "RuntimeDemoTVTests" */;
+			buildPhases = (
+				35EB2C282020FABD009D0FAE /* Sources */,
+				35EB2C292020FABD009D0FAE /* Frameworks */,
+				35EB2C2A2020FABD009D0FAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				35EB2C2E2020FABD009D0FAE /* PBXTargetDependency */,
+			);
+			name = RuntimeDemoTVTests;
+			productName = RuntimeDemoTVTests;
+			productReference = 35EB2C2C2020FABD009D0FAE /* RuntimeDemoTVTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		35ED02B0202022D4007A941C /* RuntimeDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35ED02CE202022D4007A941C /* Build configuration list for PBXNativeTarget "RuntimeDemo" */;
@@ -178,6 +296,15 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "haikieu2907@icloud.com";
 				TargetAttributes = {
+					35EB2C1B2020FABC009D0FAE = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					35EB2C2B2020FABD009D0FAE = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 35EB2C1B2020FABC009D0FAE;
+					};
 					35ED02B0202022D4007A941C = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -204,11 +331,29 @@
 			targets = (
 				35ED02B0202022D4007A941C /* RuntimeDemo */,
 				35ED02C4202022D4007A941C /* RuntimeDemoTests */,
+				35EB2C1B2020FABC009D0FAE /* RuntimeDemoTV */,
+				35EB2C2B2020FABD009D0FAE /* RuntimeDemoTVTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		35EB2C1A2020FABC009D0FAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35EB2C262020FABD009D0FAE /* Assets.xcassets in Resources */,
+				35EB2C242020FABD009D0FAE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35EB2C2A2020FABD009D0FAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		35ED02AF202022D4007A941C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -229,6 +374,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		35EB2C182020FABC009D0FAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35EB2C212020FABD009D0FAE /* ViewController.swift in Sources */,
+				35EB2C1F2020FABD009D0FAE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35EB2C282020FABD009D0FAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35EB2C312020FABD009D0FAE /* RuntimeDemoTVTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		35ED02AD202022D4007A941C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -249,6 +411,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		35EB2C2E2020FABD009D0FAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 35EB2C1B2020FABC009D0FAE /* RuntimeDemoTV */;
+			targetProxy = 35EB2C2D2020FABD009D0FAE /* PBXContainerItemProxy */;
+		};
 		35ED02C7202022D4007A941C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 35ED02B0202022D4007A941C /* RuntimeDemo */;
@@ -257,6 +424,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		35EB2C222020FABD009D0FAE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35EB2C232020FABD009D0FAE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		35ED02B8202022D4007A941C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -276,6 +451,80 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		35EB2C342020FABD009D0FAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P3SL8HVN4S;
+				INFOPLIST_FILE = RuntimeDemoTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hk.demo.RuntimeDemoTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		35EB2C352020FABD009D0FAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P3SL8HVN4S;
+				INFOPLIST_FILE = RuntimeDemoTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hk.demo.RuntimeDemoTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		35EB2C372020FABD009D0FAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P3SL8HVN4S;
+				INFOPLIST_FILE = RuntimeDemoTVTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hk.demo.RuntimeDemoTVTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RuntimeDemoTV.app/RuntimeDemoTV";
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		35EB2C382020FABD009D0FAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P3SL8HVN4S;
+				INFOPLIST_FILE = RuntimeDemoTVTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hk.demo.RuntimeDemoTVTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RuntimeDemoTV.app/RuntimeDemoTV";
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
 		35ED02CC202022D4007A941C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -390,6 +639,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P3SL8HVN4S;
 				INFOPLIST_FILE = RuntimeDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hk.demo.RuntimeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -405,6 +655,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P3SL8HVN4S;
 				INFOPLIST_FILE = RuntimeDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hk.demo.RuntimeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -450,6 +701,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		35EB2C332020FABD009D0FAE /* Build configuration list for PBXNativeTarget "RuntimeDemoTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35EB2C342020FABD009D0FAE /* Debug */,
+				35EB2C352020FABD009D0FAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35EB2C362020FABD009D0FAE /* Build configuration list for PBXNativeTarget "RuntimeDemoTVTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35EB2C372020FABD009D0FAE /* Debug */,
+				35EB2C382020FABD009D0FAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		35ED02AC202022D4007A941C /* Build configuration list for PBXProject "RuntimeDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

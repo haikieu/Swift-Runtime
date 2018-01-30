@@ -12,6 +12,14 @@
 		35EB29DE2020280B009D0FAE /* FrameworksBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB29DD2020280B009D0FAE /* FrameworksBrowserViewController.swift */; };
 		35EB29EF20202DD9009D0FAE /* RuntimeBrowserViewController.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35EB29EE20202DD9009D0FAE /* RuntimeBrowserViewController.xcassets */; };
 		35EB29F120203232009D0FAE /* ClassesBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB29F020203232009D0FAE /* ClassesBrowserViewController.swift */; };
+		35EB2BB42020F9C9009D0FAE /* RuntimeUITV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EB2BAB2020F9C9009D0FAE /* RuntimeUITV.framework */; };
+		35EB2BB92020F9C9009D0FAE /* RuntimeUITVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB2BB82020F9C9009D0FAE /* RuntimeUITVTests.swift */; };
+		35EB2BBB2020F9C9009D0FAE /* RuntimeUITV.h in Headers */ = {isa = PBXBuildFile; fileRef = 35EB2BAD2020F9C9009D0FAE /* RuntimeUITV.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35EB2C392020FAD7009D0FAE /* FrameworksBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB29DD2020280B009D0FAE /* FrameworksBrowserViewController.swift */; };
+		35EB2C3A2020FAD7009D0FAE /* ClassesBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB29F020203232009D0FAE /* ClassesBrowserViewController.swift */; };
+		35EB2C3D2020FB0D009D0FAE /* TVRuntimeBrowserViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EB2C3C2020FB0D009D0FAE /* TVRuntimeBrowserViewController.storyboard */; };
+		35EB2C3F2020FB5E009D0FAE /* TVRuntimeBrowserViewController.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35EB2C3E2020FB5E009D0FAE /* TVRuntimeBrowserViewController.xcassets */; };
+		35EB2C6F2020FC1C009D0FAE /* RuntimeTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EB2C6C2020FC16009D0FAE /* RuntimeTV.framework */; };
 		35ED034F202026A8007A941C /* RuntimeUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35ED0345202026A7007A941C /* RuntimeUI.framework */; };
 		35ED0354202026A8007A941C /* RuntimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED0353202026A8007A941C /* RuntimeUITests.swift */; };
 		35ED0356202026A8007A941C /* RuntimeUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 35ED0348202026A8007A941C /* RuntimeUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -32,6 +40,27 @@
 			remoteGlobalIDString = 35ED02E7202022F5007A941C;
 			remoteInfo = RuntimeTests;
 		};
+		35EB2BB52020F9C9009D0FAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35ED033C202026A7007A941C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35EB2BAA2020F9C9009D0FAE;
+			remoteInfo = RuntimeUITV;
+		};
+		35EB2C6B2020FC16009D0FAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35EB29CF2020270F009D0FAE /* Runtime.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 35EB2C4C2020FBD4009D0FAE;
+			remoteInfo = RuntimeTV;
+		};
+		35EB2C6D2020FC16009D0FAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35EB29CF2020270F009D0FAE /* Runtime.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 35EB2C542020FBD4009D0FAE;
+			remoteInfo = RuntimeTVTests;
+		};
 		35ED0350202026A8007A941C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 35ED033C202026A7007A941C /* Project object */;
@@ -47,6 +76,14 @@
 		35EB29DD2020280B009D0FAE /* FrameworksBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworksBrowserViewController.swift; sourceTree = "<group>"; };
 		35EB29EE20202DD9009D0FAE /* RuntimeBrowserViewController.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = RuntimeBrowserViewController.xcassets; sourceTree = "<group>"; };
 		35EB29F020203232009D0FAE /* ClassesBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesBrowserViewController.swift; sourceTree = "<group>"; };
+		35EB2BAB2020F9C9009D0FAE /* RuntimeUITV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RuntimeUITV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35EB2BAD2020F9C9009D0FAE /* RuntimeUITV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeUITV.h; sourceTree = "<group>"; };
+		35EB2BAE2020F9C9009D0FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35EB2BB32020F9C9009D0FAE /* RuntimeUITVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuntimeUITVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		35EB2BB82020F9C9009D0FAE /* RuntimeUITVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeUITVTests.swift; sourceTree = "<group>"; };
+		35EB2BBA2020F9C9009D0FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35EB2C3C2020FB0D009D0FAE /* TVRuntimeBrowserViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TVRuntimeBrowserViewController.storyboard; sourceTree = "<group>"; };
+		35EB2C3E2020FB5E009D0FAE /* TVRuntimeBrowserViewController.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TVRuntimeBrowserViewController.xcassets; sourceTree = "<group>"; };
 		35ED0345202026A7007A941C /* RuntimeUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RuntimeUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35ED0348202026A8007A941C /* RuntimeUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeUI.h; sourceTree = "<group>"; };
 		35ED0349202026A8007A941C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +93,22 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		35EB2BA72020F9C9009D0FAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35EB2C6F2020FC1C009D0FAE /* RuntimeTV.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35EB2BB02020F9C9009D0FAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35EB2BB42020F9C9009D0FAE /* RuntimeUITV.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		35ED0341202026A7007A941C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -80,6 +133,8 @@
 			children = (
 				35EB29D52020270F009D0FAE /* Runtime.framework */,
 				35EB29D72020270F009D0FAE /* RuntimeTests.xctest */,
+				35EB2C6C2020FC16009D0FAE /* RuntimeTV.framework */,
+				35EB2C6E2020FC16009D0FAE /* RuntimeTVTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,12 +157,42 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		35EB2BAC2020F9C9009D0FAE /* RuntimeUITV */ = {
+			isa = PBXGroup;
+			children = (
+				35EB2BC42020F9E3009D0FAE /* Classes */,
+				35EB2BAD2020F9C9009D0FAE /* RuntimeUITV.h */,
+				35EB2BAE2020F9C9009D0FAE /* Info.plist */,
+			);
+			path = RuntimeUITV;
+			sourceTree = "<group>";
+		};
+		35EB2BB72020F9C9009D0FAE /* RuntimeUITVTests */ = {
+			isa = PBXGroup;
+			children = (
+				35EB2BB82020F9C9009D0FAE /* RuntimeUITVTests.swift */,
+				35EB2BBA2020F9C9009D0FAE /* Info.plist */,
+			);
+			path = RuntimeUITVTests;
+			sourceTree = "<group>";
+		};
+		35EB2BC42020F9E3009D0FAE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				35EB2C3C2020FB0D009D0FAE /* TVRuntimeBrowserViewController.storyboard */,
+				35EB2C3E2020FB5E009D0FAE /* TVRuntimeBrowserViewController.xcassets */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		35ED033B202026A7007A941C = {
 			isa = PBXGroup;
 			children = (
 				35ED0368202026C8007A941C /* LinkedLibraries */,
 				35ED0347202026A7007A941C /* RuntimeUI */,
 				35ED0352202026A8007A941C /* RuntimeUITests */,
+				35EB2BAC2020F9C9009D0FAE /* RuntimeUITV */,
+				35EB2BB72020F9C9009D0FAE /* RuntimeUITVTests */,
 				35ED0346202026A7007A941C /* Products */,
 				35EB29D820202737009D0FAE /* Frameworks */,
 			);
@@ -118,6 +203,8 @@
 			children = (
 				35ED0345202026A7007A941C /* RuntimeUI.framework */,
 				35ED034E202026A8007A941C /* RuntimeUITests.xctest */,
+				35EB2BAB2020F9C9009D0FAE /* RuntimeUITV.framework */,
+				35EB2BB32020F9C9009D0FAE /* RuntimeUITVTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,6 +239,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		35EB2BA82020F9C9009D0FAE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35EB2BBB2020F9C9009D0FAE /* RuntimeUITV.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		35ED0342202026A7007A941C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -163,6 +258,42 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		35EB2BAA2020F9C9009D0FAE /* RuntimeUITV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35EB2BC22020F9C9009D0FAE /* Build configuration list for PBXNativeTarget "RuntimeUITV" */;
+			buildPhases = (
+				35EB2BA62020F9C9009D0FAE /* Sources */,
+				35EB2BA72020F9C9009D0FAE /* Frameworks */,
+				35EB2BA82020F9C9009D0FAE /* Headers */,
+				35EB2BA92020F9C9009D0FAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RuntimeUITV;
+			productName = RuntimeUITV;
+			productReference = 35EB2BAB2020F9C9009D0FAE /* RuntimeUITV.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		35EB2BB22020F9C9009D0FAE /* RuntimeUITVTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35EB2BC32020F9C9009D0FAE /* Build configuration list for PBXNativeTarget "RuntimeUITVTests" */;
+			buildPhases = (
+				35EB2BAF2020F9C9009D0FAE /* Sources */,
+				35EB2BB02020F9C9009D0FAE /* Frameworks */,
+				35EB2BB12020F9C9009D0FAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				35EB2BB62020F9C9009D0FAE /* PBXTargetDependency */,
+			);
+			name = RuntimeUITVTests;
+			productName = RuntimeUITVTests;
+			productReference = 35EB2BB32020F9C9009D0FAE /* RuntimeUITVTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		35ED0344202026A7007A941C /* RuntimeUI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35ED0359202026A8007A941C /* Build configuration list for PBXNativeTarget "RuntimeUI" */;
@@ -209,6 +340,14 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "haikieu2907@icloud.com";
 				TargetAttributes = {
+					35EB2BAA2020F9C9009D0FAE = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					35EB2BB22020F9C9009D0FAE = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					35ED0344202026A7007A941C = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
@@ -240,6 +379,8 @@
 			targets = (
 				35ED0344202026A7007A941C /* RuntimeUI */,
 				35ED034D202026A8007A941C /* RuntimeUITests */,
+				35EB2BAA2020F9C9009D0FAE /* RuntimeUITV */,
+				35EB2BB22020F9C9009D0FAE /* RuntimeUITVTests */,
 			);
 		};
 /* End PBXProject section */
@@ -259,9 +400,39 @@
 			remoteRef = 35EB29D62020270F009D0FAE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		35EB2C6C2020FC16009D0FAE /* RuntimeTV.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RuntimeTV.framework;
+			remoteRef = 35EB2C6B2020FC16009D0FAE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		35EB2C6E2020FC16009D0FAE /* RuntimeTVTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RuntimeTVTests.xctest;
+			remoteRef = 35EB2C6D2020FC16009D0FAE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		35EB2BA92020F9C9009D0FAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35EB2C3F2020FB5E009D0FAE /* TVRuntimeBrowserViewController.xcassets in Resources */,
+				35EB2C3D2020FB0D009D0FAE /* TVRuntimeBrowserViewController.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35EB2BB12020F9C9009D0FAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		35ED0343202026A7007A941C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -281,6 +452,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		35EB2BA62020F9C9009D0FAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35EB2C3A2020FAD7009D0FAE /* ClassesBrowserViewController.swift in Sources */,
+				35EB2C392020FAD7009D0FAE /* FrameworksBrowserViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35EB2BAF2020F9C9009D0FAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35EB2BB92020F9C9009D0FAE /* RuntimeUITVTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		35ED0340202026A7007A941C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,6 +489,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		35EB2BB62020F9C9009D0FAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 35EB2BAA2020F9C9009D0FAE /* RuntimeUITV */;
+			targetProxy = 35EB2BB52020F9C9009D0FAE /* PBXContainerItemProxy */;
+		};
 		35ED0351202026A8007A941C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 35ED0344202026A7007A941C /* RuntimeUI */;
@@ -309,6 +502,86 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		35EB2BBC2020F9C9009D0FAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = P3SL8HVN4S;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = RuntimeUITV/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hk.lib.RuntimeUITV;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		35EB2BBD2020F9C9009D0FAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = P3SL8HVN4S;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = RuntimeUITV/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hk.lib.RuntimeUITV;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
+		35EB2BBE2020F9C9009D0FAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P3SL8HVN4S;
+				INFOPLIST_FILE = RuntimeUITVTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hk.lib.RuntimeUITVTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		35EB2BBF2020F9C9009D0FAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P3SL8HVN4S;
+				INFOPLIST_FILE = RuntimeUITVTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hk.lib.RuntimeUITVTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
 		35ED0357202026A8007A941C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -500,6 +773,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		35EB2BC22020F9C9009D0FAE /* Build configuration list for PBXNativeTarget "RuntimeUITV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35EB2BBC2020F9C9009D0FAE /* Debug */,
+				35EB2BBD2020F9C9009D0FAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35EB2BC32020F9C9009D0FAE /* Build configuration list for PBXNativeTarget "RuntimeUITVTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35EB2BBE2020F9C9009D0FAE /* Debug */,
+				35EB2BBF2020F9C9009D0FAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		35ED033F202026A7007A941C /* Build configuration list for PBXProject "RuntimeUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="87Q-By-4HL">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="jAV-EK-rki">
+            <objects>
+                <viewController id="87Q-By-4HL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vsl-6I-ezr"/>
+                        <viewControllerLayoutGuide type="bottom" id="bcc-HQ-Uxx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a5L-WQ-yhC">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6rr-yR-HD0">
+                                <rect key="frame" x="90" y="60" width="1740" height="960"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RLR-pR-IAr">
+                                    <size key="itemSize" width="150" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="GvF-li-1w3">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mr0-aE-9uZ">
+                                                    <rect key="frame" x="5" y="5" width="140" height="140"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Mr0-aE-9uZ" secondAttribute="bottom" constant="5" id="2nM-2x-h9D"/>
+                                            <constraint firstItem="Mr0-aE-9uZ" firstAttribute="leading" secondItem="GvF-li-1w3" secondAttribute="leading" constant="5" id="SoC-cx-Zgf"/>
+                                            <constraint firstAttribute="trailing" secondItem="Mr0-aE-9uZ" secondAttribute="trailing" constant="5" id="fSu-sU-kiF"/>
+                                            <constraint firstItem="Mr0-aE-9uZ" firstAttribute="top" secondItem="GvF-li-1w3" secondAttribute="top" constant="5" id="hVd-Zn-Sn2"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="6rr-yR-HD0" firstAttribute="leading" secondItem="fTo-8R-40a" secondAttribute="leading" id="50F-Hh-UMF"/>
+                            <constraint firstItem="fTo-8R-40a" firstAttribute="trailing" secondItem="6rr-yR-HD0" secondAttribute="trailing" id="GHm-UB-aZe"/>
+                            <constraint firstItem="bcc-HQ-Uxx" firstAttribute="top" secondItem="6rr-yR-HD0" secondAttribute="bottom" id="INO-ox-7fb"/>
+                            <constraint firstItem="6rr-yR-HD0" firstAttribute="top" secondItem="Vsl-6I-ezr" secondAttribute="bottom" id="tes-lC-uAA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fTo-8R-40a"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="juU-uP-8PR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2878" y="2258"/>
+        </scene>
+    </scenes>
+</document>

@@ -7,7 +7,13 @@
 //
 
 import UIKit
-import Runtime
+#if os(iOS)
+    import Runtime
+#endif
+
+#if os(tvOS)
+    import RuntimeTV
+#endif
 
 class FrameworksBrowserViewController: UIViewController {
 

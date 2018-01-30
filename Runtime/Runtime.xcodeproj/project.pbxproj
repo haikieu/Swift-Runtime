@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35EB2C552020FBD4009D0FAE /* RuntimeTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EB2C4C2020FBD4009D0FAE /* RuntimeTV.framework */; };
+		35EB2C5A2020FBD4009D0FAE /* RuntimeTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB2C592020FBD4009D0FAE /* RuntimeTVTests.swift */; };
+		35EB2C5C2020FBD4009D0FAE /* RuntimeTV.h in Headers */ = {isa = PBXBuildFile; fileRef = 35EB2C4E2020FBD4009D0FAE /* RuntimeTV.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35EB2C632020FBE1009D0FAE /* AClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED03052020237E007A941C /* AClass.swift */; };
+		35EB2C642020FBE1009D0FAE /* AFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED03062020237E007A941C /* AFramework.swift */; };
+		35EB2C652020FBE1009D0FAE /* Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED03072020237E007A941C /* Runtime.swift */; };
 		35ED02E8202022F5007A941C /* Runtime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35ED02DE202022F5007A941C /* Runtime.framework */; };
 		35ED02ED202022F5007A941C /* RuntimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED02EC202022F5007A941C /* RuntimeTests.swift */; };
 		35ED02EF202022F5007A941C /* Runtime.h in Headers */ = {isa = PBXBuildFile; fileRef = 35ED02E1202022F5007A941C /* Runtime.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -18,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		35EB2C562020FBD4009D0FAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35ED02D5202022F5007A941C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35EB2C4B2020FBD4009D0FAE;
+			remoteInfo = RuntimeTV;
+		};
 		35ED02E9202022F5007A941C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 35ED02D5202022F5007A941C /* Project object */;
@@ -28,6 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35EB2C4C2020FBD4009D0FAE /* RuntimeTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RuntimeTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35EB2C4E2020FBD4009D0FAE /* RuntimeTV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeTV.h; sourceTree = "<group>"; };
+		35EB2C4F2020FBD4009D0FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35EB2C542020FBD4009D0FAE /* RuntimeTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuntimeTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		35EB2C592020FBD4009D0FAE /* RuntimeTVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeTVTests.swift; sourceTree = "<group>"; };
+		35EB2C5B2020FBD4009D0FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35ED02DE202022F5007A941C /* Runtime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Runtime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35ED02E1202022F5007A941C /* Runtime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Runtime.h; sourceTree = "<group>"; };
 		35ED02E2202022F5007A941C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,6 +61,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		35EB2C482020FBD4009D0FAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35EB2C512020FBD4009D0FAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35EB2C552020FBD4009D0FAE /* RuntimeTV.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		35ED02DA202022F5007A941C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -60,11 +94,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35EB2C4D2020FBD4009D0FAE /* RuntimeTV */ = {
+			isa = PBXGroup;
+			children = (
+				35EB2C4E2020FBD4009D0FAE /* RuntimeTV.h */,
+				35EB2C4F2020FBD4009D0FAE /* Info.plist */,
+			);
+			path = RuntimeTV;
+			sourceTree = "<group>";
+		};
+		35EB2C582020FBD4009D0FAE /* RuntimeTVTests */ = {
+			isa = PBXGroup;
+			children = (
+				35EB2C592020FBD4009D0FAE /* RuntimeTVTests.swift */,
+				35EB2C5B2020FBD4009D0FAE /* Info.plist */,
+			);
+			path = RuntimeTVTests;
+			sourceTree = "<group>";
+		};
 		35ED02D4202022F5007A941C = {
 			isa = PBXGroup;
 			children = (
 				35ED02E0202022F5007A941C /* Runtime */,
 				35ED02EB202022F5007A941C /* RuntimeTests */,
+				35EB2C4D2020FBD4009D0FAE /* RuntimeTV */,
+				35EB2C582020FBD4009D0FAE /* RuntimeTVTests */,
 				35ED02DF202022F5007A941C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +128,8 @@
 			children = (
 				35ED02DE202022F5007A941C /* Runtime.framework */,
 				35ED02E7202022F5007A941C /* RuntimeTests.xctest */,
+				35EB2C4C2020FBD4009D0FAE /* RuntimeTV.framework */,
+				35EB2C542020FBD4009D0FAE /* RuntimeTVTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +168,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		35EB2C492020FBD4009D0FAE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35EB2C5C2020FBD4009D0FAE /* RuntimeTV.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		35ED02DB202022F5007A941C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -123,6 +187,42 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		35EB2C4B2020FBD4009D0FAE /* RuntimeTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35EB2C612020FBD4009D0FAE /* Build configuration list for PBXNativeTarget "RuntimeTV" */;
+			buildPhases = (
+				35EB2C472020FBD4009D0FAE /* Sources */,
+				35EB2C482020FBD4009D0FAE /* Frameworks */,
+				35EB2C492020FBD4009D0FAE /* Headers */,
+				35EB2C4A2020FBD4009D0FAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RuntimeTV;
+			productName = RuntimeTV;
+			productReference = 35EB2C4C2020FBD4009D0FAE /* RuntimeTV.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		35EB2C532020FBD4009D0FAE /* RuntimeTVTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35EB2C622020FBD4009D0FAE /* Build configuration list for PBXNativeTarget "RuntimeTVTests" */;
+			buildPhases = (
+				35EB2C502020FBD4009D0FAE /* Sources */,
+				35EB2C512020FBD4009D0FAE /* Frameworks */,
+				35EB2C522020FBD4009D0FAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				35EB2C572020FBD4009D0FAE /* PBXTargetDependency */,
+			);
+			name = RuntimeTVTests;
+			productName = RuntimeTVTests;
+			productReference = 35EB2C542020FBD4009D0FAE /* RuntimeTVTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		35ED02DD202022F5007A941C /* Runtime */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35ED02F2202022F5007A941C /* Build configuration list for PBXNativeTarget "Runtime" */;
@@ -169,6 +269,14 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "haikieu2907@icloud.com";
 				TargetAttributes = {
+					35EB2C4B2020FBD4009D0FAE = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					35EB2C532020FBD4009D0FAE = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					35ED02DD202022F5007A941C = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
@@ -194,11 +302,27 @@
 			targets = (
 				35ED02DD202022F5007A941C /* Runtime */,
 				35ED02E6202022F5007A941C /* RuntimeTests */,
+				35EB2C4B2020FBD4009D0FAE /* RuntimeTV */,
+				35EB2C532020FBD4009D0FAE /* RuntimeTVTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		35EB2C4A2020FBD4009D0FAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35EB2C522020FBD4009D0FAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		35ED02DC202022F5007A941C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -216,6 +340,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		35EB2C472020FBD4009D0FAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35EB2C642020FBE1009D0FAE /* AFramework.swift in Sources */,
+				35EB2C652020FBE1009D0FAE /* Runtime.swift in Sources */,
+				35EB2C632020FBE1009D0FAE /* AClass.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35EB2C502020FBD4009D0FAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35EB2C5A2020FBD4009D0FAE /* RuntimeTVTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		35ED02D9202022F5007A941C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -239,6 +381,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		35EB2C572020FBD4009D0FAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 35EB2C4B2020FBD4009D0FAE /* RuntimeTV */;
+			targetProxy = 35EB2C562020FBD4009D0FAE /* PBXContainerItemProxy */;
+		};
 		35ED02EA202022F5007A941C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 35ED02DD202022F5007A941C /* Runtime */;
@@ -247,6 +394,86 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		35EB2C5D2020FBD4009D0FAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = P3SL8HVN4S;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = RuntimeTV/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hk.demo.RuntimeTV;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		35EB2C5E2020FBD4009D0FAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = P3SL8HVN4S;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = RuntimeTV/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hk.demo.RuntimeTV;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
+		35EB2C5F2020FBD4009D0FAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P3SL8HVN4S;
+				INFOPLIST_FILE = RuntimeTVTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hk.demo.RuntimeTVTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		35EB2C602020FBD4009D0FAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P3SL8HVN4S;
+				INFOPLIST_FILE = RuntimeTVTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hk.demo.RuntimeTVTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
 		35ED02F0202022F5007A941C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -438,6 +665,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		35EB2C612020FBD4009D0FAE /* Build configuration list for PBXNativeTarget "RuntimeTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35EB2C5D2020FBD4009D0FAE /* Debug */,
+				35EB2C5E2020FBD4009D0FAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35EB2C622020FBD4009D0FAE /* Build configuration list for PBXNativeTarget "RuntimeTVTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35EB2C5F2020FBD4009D0FAE /* Debug */,
+				35EB2C602020FBD4009D0FAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		35ED02D8202022F5007A941C /* Build configuration list for PBXProject "Runtime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
