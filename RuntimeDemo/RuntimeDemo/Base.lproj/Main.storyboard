@@ -38,10 +38,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--Sceens-->
+        <!--RuntimeBrowserViewController-->
         <scene sceneID="cK1-7Y-hVG">
             <objects>
-                <viewControllerPlaceholder storyboardName="Sceens" bundleIdentifier="com.hk.lib.RuntimeUI" id="g7m-2J-rJt" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="RuntimeBrowserViewController" bundleIdentifier="com.hk.lib.RuntimeUI" id="g7m-2J-rJt" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EfV-Xs-Edi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="13" y="623"/>

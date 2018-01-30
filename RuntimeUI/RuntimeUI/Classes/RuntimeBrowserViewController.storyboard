@@ -51,19 +51,26 @@
                                             <rect key="frame" x="0.0" y="0.0" width="95" height="95"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Framework" translatesAutoresizingMaskIntoConstraints="NO" id="cG5-hG-saV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="95" height="95"/>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Framework" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uNb-3M-a5d">
                                                     <rect key="frame" x="0.0" y="0.0" width="95" height="95"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstItem="cG5-hG-saV" firstAttribute="leading" secondItem="Wq2-RV-D4s" secondAttribute="leading" id="4Z7-vZ-tEH"/>
+                                            <constraint firstItem="cG5-hG-saV" firstAttribute="top" secondItem="Wq2-RV-D4s" secondAttribute="top" id="8cr-uB-z0X"/>
                                             <constraint firstAttribute="trailing" secondItem="uNb-3M-a5d" secondAttribute="trailing" id="9Uo-bL-AeV"/>
                                             <constraint firstAttribute="bottom" secondItem="uNb-3M-a5d" secondAttribute="bottom" id="Sgp-B7-9Nj"/>
                                             <constraint firstItem="uNb-3M-a5d" firstAttribute="top" secondItem="Wq2-RV-D4s" secondAttribute="top" id="V5N-C7-7XD"/>
                                             <constraint firstItem="uNb-3M-a5d" firstAttribute="leading" secondItem="Wq2-RV-D4s" secondAttribute="leading" id="m8w-CM-Uq9"/>
+                                            <constraint firstAttribute="bottom" secondItem="cG5-hG-saV" secondAttribute="bottom" id="ma0-EE-aB8"/>
+                                            <constraint firstAttribute="trailing" secondItem="cG5-hG-saV" secondAttribute="trailing" id="uGc-BC-QSA"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="nameLabel" destination="uNb-3M-a5d" id="RcW-Le-aX1"/>
@@ -92,4 +99,7 @@
             <point key="canvasLocation" x="332" y="119.1904047976012"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Framework" width="254" height="254"/>
+    </resources>
 </document>
