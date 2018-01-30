@@ -9,8 +9,10 @@
 import UIKit
 import Runtime
 
-class RuntimeBrowserViewController: UIViewController {
+class FrameworksBrowserViewController: UIViewController {
 
+    weak var selectedFramework : AFramework?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,11 +29,15 @@ class RuntimeBrowserViewController: UIViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "segue_open_classes_browser" {
+            let vc = segue.destination as! ClassesBrowserViewController
+            vc.framework = selectedFramework
+        }
     }
-    */
 
 }
 
@@ -58,11 +64,17 @@ class ClassCell : CommonCell {
     
 }
 
-extension RuntimeBrowserViewController : UICollectionViewDelegate {
-    
+extension FrameworksBrowserViewController : UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedFramework = Runtime.environment.frameworks[indexPath.row]
+        performSegue(withIdentifier: "segue_open_classes_browser", sender: self)
+    }
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        selectedFramework = nil
+    }
 }
 
-extension RuntimeBrowserViewController : UICollectionViewDataSource {
+extension FrameworksBrowserViewController : UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -78,3 +90,5 @@ extension RuntimeBrowserViewController : UICollectionViewDataSource {
         return cell
     }
 }
+
+

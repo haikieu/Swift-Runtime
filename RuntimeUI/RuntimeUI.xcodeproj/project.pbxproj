@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		35EB29D920202737009D0FAE /* Runtime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EB29D52020270F009D0FAE /* Runtime.framework */; };
 		35EB29DC20202761009D0FAE /* RuntimeBrowserViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EB29DB20202761009D0FAE /* RuntimeBrowserViewController.storyboard */; };
-		35EB29DE2020280B009D0FAE /* RuntimeBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB29DD2020280B009D0FAE /* RuntimeBrowserViewController.swift */; };
+		35EB29DE2020280B009D0FAE /* FrameworksBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB29DD2020280B009D0FAE /* FrameworksBrowserViewController.swift */; };
 		35EB29EF20202DD9009D0FAE /* RuntimeBrowserViewController.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35EB29EE20202DD9009D0FAE /* RuntimeBrowserViewController.xcassets */; };
+		35EB29F120203232009D0FAE /* ClassesBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB29F020203232009D0FAE /* ClassesBrowserViewController.swift */; };
 		35ED034F202026A8007A941C /* RuntimeUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35ED0345202026A7007A941C /* RuntimeUI.framework */; };
 		35ED0354202026A8007A941C /* RuntimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED0353202026A8007A941C /* RuntimeUITests.swift */; };
 		35ED0356202026A8007A941C /* RuntimeUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 35ED0348202026A8007A941C /* RuntimeUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -43,8 +44,9 @@
 /* Begin PBXFileReference section */
 		35EB29CF2020270F009D0FAE /* Runtime.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Runtime.xcodeproj; path = ../Runtime/Runtime.xcodeproj; sourceTree = "<group>"; };
 		35EB29DB20202761009D0FAE /* RuntimeBrowserViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RuntimeBrowserViewController.storyboard; sourceTree = "<group>"; };
-		35EB29DD2020280B009D0FAE /* RuntimeBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeBrowserViewController.swift; sourceTree = "<group>"; };
+		35EB29DD2020280B009D0FAE /* FrameworksBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworksBrowserViewController.swift; sourceTree = "<group>"; };
 		35EB29EE20202DD9009D0FAE /* RuntimeBrowserViewController.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = RuntimeBrowserViewController.xcassets; sourceTree = "<group>"; };
+		35EB29F020203232009D0FAE /* ClassesBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesBrowserViewController.swift; sourceTree = "<group>"; };
 		35ED0345202026A7007A941C /* RuntimeUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RuntimeUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35ED0348202026A8007A941C /* RuntimeUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeUI.h; sourceTree = "<group>"; };
 		35ED0349202026A8007A941C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,8 +95,9 @@
 			isa = PBXGroup;
 			children = (
 				35EB29DB20202761009D0FAE /* RuntimeBrowserViewController.storyboard */,
-				35EB29DD2020280B009D0FAE /* RuntimeBrowserViewController.swift */,
 				35EB29EE20202DD9009D0FAE /* RuntimeBrowserViewController.xcassets */,
+				35EB29DD2020280B009D0FAE /* FrameworksBrowserViewController.swift */,
+				35EB29F020203232009D0FAE /* ClassesBrowserViewController.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -282,7 +285,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35EB29DE2020280B009D0FAE /* RuntimeBrowserViewController.swift in Sources */,
+				35EB29F120203232009D0FAE /* ClassesBrowserViewController.swift in Sources */,
+				35EB29DE2020280B009D0FAE /* FrameworksBrowserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
