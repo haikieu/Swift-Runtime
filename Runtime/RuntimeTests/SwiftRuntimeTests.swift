@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import SwiftRuntime
+@testable import Runtime
 
 class SwiftRuntimeTests: XCTestCase {
     

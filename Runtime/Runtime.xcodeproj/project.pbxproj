@@ -10,6 +10,11 @@
 		35ED02E8202022F5007A941C /* Runtime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35ED02DE202022F5007A941C /* Runtime.framework */; };
 		35ED02ED202022F5007A941C /* RuntimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED02EC202022F5007A941C /* RuntimeTests.swift */; };
 		35ED02EF202022F5007A941C /* Runtime.h in Headers */ = {isa = PBXBuildFile; fileRef = 35ED02E1202022F5007A941C /* Runtime.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35ED03082020237E007A941C /* AClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED03052020237E007A941C /* AClass.swift */; };
+		35ED03092020237E007A941C /* AFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED03062020237E007A941C /* AFramework.swift */; };
+		35ED030A2020237E007A941C /* Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED03072020237E007A941C /* Runtime.swift */; };
+		35ED030D202023A7007A941C /* SwiftRuntimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED030B202023A7007A941C /* SwiftRuntimeTests.swift */; };
+		35ED030E202023A7007A941C /* ClassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED030C202023A7007A941C /* ClassTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,11 @@
 		35ED02E7202022F5007A941C /* RuntimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuntimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35ED02EC202022F5007A941C /* RuntimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeTests.swift; sourceTree = "<group>"; };
 		35ED02EE202022F5007A941C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35ED03052020237E007A941C /* AClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AClass.swift; sourceTree = "<group>"; };
+		35ED03062020237E007A941C /* AFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFramework.swift; sourceTree = "<group>"; };
+		35ED03072020237E007A941C /* Runtime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Runtime.swift; sourceTree = "<group>"; };
+		35ED030B202023A7007A941C /* SwiftRuntimeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRuntimeTests.swift; sourceTree = "<group>"; };
+		35ED030C202023A7007A941C /* ClassTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,7 @@
 		35ED02E0202022F5007A941C /* Runtime */ = {
 			isa = PBXGroup;
 			children = (
+				35ED02F82020232D007A941C /* Classes */,
 				35ED02E1202022F5007A941C /* Runtime.h */,
 				35ED02E2202022F5007A941C /* Info.plist */,
 			);
@@ -80,10 +91,22 @@
 		35ED02EB202022F5007A941C /* RuntimeTests */ = {
 			isa = PBXGroup;
 			children = (
+				35ED030C202023A7007A941C /* ClassTests.swift */,
+				35ED030B202023A7007A941C /* SwiftRuntimeTests.swift */,
 				35ED02EC202022F5007A941C /* RuntimeTests.swift */,
 				35ED02EE202022F5007A941C /* Info.plist */,
 			);
 			path = RuntimeTests;
+			sourceTree = "<group>";
+		};
+		35ED02F82020232D007A941C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				35ED03052020237E007A941C /* AClass.swift */,
+				35ED03062020237E007A941C /* AFramework.swift */,
+				35ED03072020237E007A941C /* Runtime.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +171,7 @@
 				TargetAttributes = {
 					35ED02DD202022F5007A941C = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					35ED02E6202022F5007A941C = {
@@ -196,6 +220,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35ED03092020237E007A941C /* AFramework.swift in Sources */,
+				35ED030A2020237E007A941C /* Runtime.swift in Sources */,
+				35ED03082020237E007A941C /* AClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +230,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35ED030D202023A7007A941C /* SwiftRuntimeTests.swift in Sources */,
 				35ED02ED202022F5007A941C /* RuntimeTests.swift in Sources */,
+				35ED030E202023A7007A941C /* ClassTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +296,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -321,7 +350,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -334,6 +363,7 @@
 		35ED02F3202022F5007A941C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -347,6 +377,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hk.lib.Runtime;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -355,6 +386,7 @@
 		35ED02F4202022F5007A941C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -376,6 +408,7 @@
 		35ED02F6202022F5007A941C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P3SL8HVN4S;
 				INFOPLIST_FILE = RuntimeTests/Info.plist;
@@ -390,6 +423,7 @@
 		35ED02F7202022F5007A941C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P3SL8HVN4S;
 				INFOPLIST_FILE = RuntimeTests/Info.plist;
