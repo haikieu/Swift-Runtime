@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35EB29E020202A24009D0FAE /* Runtime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EB29DF20202A24009D0FAE /* Runtime.framework */; };
+		35EB29E120202A24009D0FAE /* Runtime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35EB29DF20202A24009D0FAE /* Runtime.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		35EB29E420202A29009D0FAE /* RuntimeUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EB29E320202A29009D0FAE /* RuntimeUI.framework */; };
+		35EB29E520202A29009D0FAE /* RuntimeUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35EB29E320202A29009D0FAE /* RuntimeUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		35ED02B5202022D4007A941C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED02B4202022D4007A941C /* AppDelegate.swift */; };
 		35ED02B7202022D4007A941C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED02B6202022D4007A941C /* ViewController.swift */; };
 		35ED02BA202022D4007A941C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35ED02B8202022D4007A941C /* Main.storyboard */; };
@@ -25,7 +29,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		35EB29E220202A25009D0FAE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				35EB29E120202A24009D0FAE /* Runtime.framework in Embed Frameworks */,
+				35EB29E520202A29009D0FAE /* RuntimeUI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		35EB29DF20202A24009D0FAE /* Runtime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Runtime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35EB29E320202A29009D0FAE /* RuntimeUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RuntimeUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35ED02B1202022D4007A941C /* RuntimeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuntimeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35ED02B4202022D4007A941C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35ED02B6202022D4007A941C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35EB29E020202A24009D0FAE /* Runtime.framework in Frameworks */,
+				35EB29E420202A29009D0FAE /* RuntimeUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,11 +79,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35EB29E620202AD3009D0FAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		35ED02A8202022D4007A941C = {
 			isa = PBXGroup;
 			children = (
+				35EB29E320202A29009D0FAE /* RuntimeUI.framework */,
+				35EB29DF20202A24009D0FAE /* Runtime.framework */,
 				35ED02B3202022D4007A941C /* RuntimeDemo */,
 				35ED02C8202022D4007A941C /* RuntimeDemoTests */,
+				35EB29E620202AD3009D0FAE /* Frameworks */,
 				35ED02B2202022D4007A941C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -106,6 +139,7 @@
 				35ED02AD202022D4007A941C /* Sources */,
 				35ED02AE202022D4007A941C /* Frameworks */,
 				35ED02AF202022D4007A941C /* Resources */,
+				35EB29E220202A25009D0FAE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

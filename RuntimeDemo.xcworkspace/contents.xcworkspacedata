@@ -7,4 +7,7 @@
    <FileRef
       location = "group:Runtime/Runtime.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:RuntimeUI/RuntimeUI.xcodeproj">
+   </FileRef>
 </Workspace>
