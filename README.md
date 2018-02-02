@@ -1,8 +1,10 @@
 # Swift-Runtime-Library
 
+[![Build Status](https://travis-ci.org/haikieu/Swift-Runtime.svg?branch=master)](https://travis-ci.org/haikieu/Swift-Runtime)
+
+
 ![Swift-Runtime-Library](https://raw.githubusercontent.com/haikieu/Swift-Runtime/master/Screenshots/Screenshot.png "Get all frameworks and library at runtime")
 
-[![Build Status](https://travis-ci.org/haikieu/Swift-Runtime.svg?branch=master)](https://travis-ci.org/haikieu/Swift-Runtime)
 
 MIT License
 
