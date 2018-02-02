@@ -16,7 +16,7 @@ before_install:
 
 script:
   - set -o pipefail
-  - travis_retry xcodebuild -workspace ./RuntimeDemo.xcworkspace -scheme RuntimeUI -sdk iphonesimulator -destination "id=$IOS_SIMULATOR_UDID" test | xcpretty -c
-  - xcodebuild -workspace ./RuntimeDemo.xcworkspace -scheme RuntimeUI -sdk macosx -destination 'platform=OS X,arch=x86_64' test | xcpretty -c
+  - travis_retry xcodebuild -workspace ./RuntimeDemo.xcworkspace -scheme RuntimeUI -sdk iphonesimulator -destination "id=$IOS_SIMULATOR_UDID"
+  - xcodebuild -workspace ./RuntimeDemo.xcworkspace -scheme RuntimeUI -sdk macosx -destination 'platform=OS X,arch=x86_64'
   #- xcodebuild -project Tests/Framework/CocoaAsyncSocketTests.xcodeproj -scheme "CocoaAsyncSocketTests (iOS)" -sdk iphonesimulator -destination "id=$IOS_SIMULATOR_UDID" test | xcpretty -c
   #- xcodebuild -project Tests/Framework/CocoaAsyncSocketTests.xcodeproj -scheme "CocoaAsyncSocketTests (macOS)" -sdk macosx -destination 'platform=OS X,arch=x86_64' test | xcpretty -c
