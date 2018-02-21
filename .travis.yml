@@ -1,16 +1,22 @@
 language: swift # or objective-c
 osx_image: xcode9.1
 
+env:
+  global:
+    - WORKSPACE=RuntimeDemo.xcworkspace
+
 before_install:
   - brew update || brew update
   - brew outdated xctool || brew upgrade xctool
 
 script:
   - env
-  - xcodebuild -scheme Runtime -workspace RuntimeDemo.xcworkspace ONLY_ACTIVE_ARCH=NO -configuration Release -sdk iphoneos clean build | xcpretty
-  - xcodebuild -scheme RuntimeTV -workspace RuntimeDemo.xcworkspace ONLY_ACTIVE_ARCH=NO -configuration Release -sdk appletvos clean build | xcpretty
-  - xcodebuild -scheme Runtime -workspace RuntimeDemo.xcworkspace ONLY_ACTIVE_ARCH=YES -configuration Debug -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8' -enableCodeCoverage YES build test | xcpretty
-  - xcodebuild -scheme RuntimeTV -workspace RuntimeDemo.xcworkspace ONLY_ACTIVE_ARCH=YES -configuration Debug -sdk appletvsimulator -destination 'platform=tvOS Simulator,name=Apple TV' -enableCodeCoverage YES build test | xcpretty
+  - xcodebuild -version
+  - xcodebuild -showsdks
+  - xcodebuild -scheme Runtime -workspace "$WORKSPACE" ONLY_ACTIVE_ARCH=NO -configuration Release -sdk iphoneos clean build | xcpretty
+  - xcodebuild -scheme RuntimeTV -workspace "$WORKSPACE" ONLY_ACTIVE_ARCH=NO -configuration Release -sdk appletvos clean build | xcpretty
+  - xcodebuild -scheme Runtime -workspace "$WORKSPACE" ONLY_ACTIVE_ARCH=YES -configuration Debug -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8' ENABLE_TESTABILITY=YES -enableCodeCoverage YES build test | xcpretty
+  - xcodebuild -scheme RuntimeTV -workspace "$WORKSPACE" ONLY_ACTIVE_ARCH=YES -configuration Debug -sdk appletvsimulator -destination 'platform=tvOS Simulator,name=Apple TV' ENABLE_TESTABILITY=YES -enableCodeCoverage YES build test | xcpretty
 
 after_success:
   - bash <(curl -s https://codecov.io/bash) -t b950ada7-944f-4d80-9474-78be452bb8d5 -J 'Runtime RuntimeTV'
