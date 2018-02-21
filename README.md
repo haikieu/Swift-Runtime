@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/haikieu/Swift-Runtime.svg?branch=master)](https://travis-ci.org/haikieu/Swift-Runtime)
 
+[![codecov](https://codecov.io/gh/haikieu/Swift-Runtime/branch/master/graph/badge.svg)](https://codecov.io/gh/haikieu/Swift-Runtime)
+
 ![Swift-Runtime-Library](https://raw.githubusercontent.com/haikieu/Swift-Runtime/master/Diagram1.jpg "Get all frameworks and library at runtime")
 
 ![Swift-Runtime-Library](https://raw.githubusercontent.com/haikieu/Swift-Runtime/master/Screenshots/Screenshot.png "Get all frameworks and library at runtime")
