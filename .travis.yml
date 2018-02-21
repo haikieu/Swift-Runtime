@@ -3,17 +3,19 @@ osx_image: xcode9.1
 env:
   global:
   - WORKSPACE=RuntimeDemo.xcworkspace
+before_install:
+  - brew update || brew update
+  - brew outdated xctool || brew upgrade xctool
+  - brew outdated carthage || brew upgrade carthage
 before_deploy:
 - carthage build --no-skip-current
-- carthage archive RuntimeTV
-- carthage archive Runtime
+- carthage archive Runtime RuntimeTV
 deploy:
   provider: releases
   api_key:
     secure: E1VZ0pxCoALnRIn39AkXwNSXUuB1YBdG3fp8J+bBvpPIY+5zNaLKyPs8LsGVAf+weRUoj3LN2xW1lEfLkcWdFF60yLsyaGTN56Bzxd1+pYj43T1rO2VwMuK4bzY24TEFyU7MG25qrTSjl2MglM2VlmFJerTzW1NcUXd4MSelDdwZ8MWfNTGE0H6ljCLD6PujCR9+fRtz0RIb547rAeDn3lbUy73J0bzYKivCdmlXPFxfwKIS7cmlxfFmyJPEfw1ymYY7YSG7AFMdpE4+qT1ym7ODnthzZQBQAL0ysfsY32rHO8blaKSwQuvMJ7DccCvCVxsK1gBZsPPSVlcRLmkVF2QWvx0Qk9Vp3NzJyj+kiFqoeEyz8npF0kk/qgpngLepI70DJgPJj5Z00V1A2wgGVd3jw0bjT5gtLqe7qIZwymLIDwFJIDjXMeNsCMJxpQqhSqZJphsRcAhYk8E7BroqIUK055YLCG3S9YJN6E2hivBZzMcrs6h2deiv+rpY5Hj0SO3ebZ3EUDEoUeqO7BrdLGR3um0Ds7H3XiZtkHxG0rnxYIbHR5cIr17q+VrCjJhebOi1p+6sCQFz5bmueWk71SBDuUqz9qd2/mZp7zIE1o3a4QK+g77OdoLAct7yBx9wkBYv1QhVHDHkttsSKLpRB9rorC0OgGbRxFAuAj4hX84=
   file: 
-   - "Runtime.framework.zip"
-   - "RuntimeTV.framework.zip"
+   "Runtime.framework.zip"
   skip_cleanup: true
   on:
     repo: haikieu/Swift-Runtime
