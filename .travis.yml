@@ -6,9 +6,9 @@ env:
     - WORKSPACE=RuntimeDemo.xcworkspace
 
 before_install:
-  - brew update || brew update
-  - brew outdated xctool || brew upgrade xctool
-  - brew outdated carthage || brew upgrade carthage
+  #- brew update || brew update
+  #- brew outdated xctool || brew upgrade xctool
+  #- brew outdated carthage || brew upgrade carthage
   
 before_script:
   # bootstrap the dependencies for the project
@@ -19,8 +19,8 @@ script:
   - env
   - xcodebuild -version
   - xcodebuild -showsdks
-  - xcodebuild -scheme Runtime -workspace "${WORKSPACE}" ONLY_ACTIVE_ARCH=NO -configuration Release -sdk iphoneos clean build | xcpretty
-  - xcodebuild -scheme RuntimeTV -workspace "${WORKSPACE}" ONLY_ACTIVE_ARCH=NO -configuration Release -sdk appletvos clean build | xcpretty
+  - xcodebuild -scheme Runtime -workspace "${WORKSPACE}" ONLY_ACTIVE_ARCH=NO -configuration Release -sdk iphoneos build | xcpretty
+  - xcodebuild -scheme RuntimeTV -workspace "${WORKSPACE}" ONLY_ACTIVE_ARCH=NO -configuration Release -sdk appletvos build | xcpretty
   - xcodebuild -scheme Runtime -workspace "${WORKSPACE}" ONLY_ACTIVE_ARCH=YES -configuration Debug -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8' ENABLE_TESTABILITY=YES -enableCodeCoverage YES build test | xcpretty
   - xcodebuild -scheme RuntimeTV -workspace "${WORKSPACE}" ONLY_ACTIVE_ARCH=YES -configuration Debug -sdk appletvsimulator -destination 'platform=tvOS Simulator,name=Apple TV' ENABLE_TESTABILITY=YES -enableCodeCoverage YES build test | xcpretty
 
