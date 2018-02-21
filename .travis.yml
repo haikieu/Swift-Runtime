@@ -3,10 +3,6 @@ osx_image: xcode9.1
 env:
   global:
   - WORKSPACE=RuntimeDemo.xcworkspace
-before_install:
-- brew update || brew update
-- brew outdated xctool || brew upgrade xctool
-- brew outdated carthage || brew upgrade carthage
 before_deploy:
 - carthage build --no-skip-current
 - carthage archive RuntimeTV
