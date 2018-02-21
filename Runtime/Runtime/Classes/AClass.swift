@@ -111,6 +111,7 @@ public class AClass {
         return procotols
     }()
     
+    @available(*, unavailable, message: "This is not available")
     public var objects : [AObject] {
         var objects = [AObject]()
         return objects

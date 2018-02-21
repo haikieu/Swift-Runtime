@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		356AB42D203DFCF400116B99 /* ClassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED030C202023A7007A941C /* ClassTests.swift */; };
+		356AB42F203DFCF900116B99 /* RuntimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED02EC202022F5007A941C /* RuntimeTests.swift */; };
+		356AB431203DFD9D00116B99 /* FrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356AB430203DFD9D00116B99 /* FrameworkTests.swift */; };
+		356AB432203DFD9D00116B99 /* FrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356AB430203DFD9D00116B99 /* FrameworkTests.swift */; };
 		35EB2C552020FBD4009D0FAE /* RuntimeTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EB2C4C2020FBD4009D0FAE /* RuntimeTV.framework */; };
-		35EB2C5A2020FBD4009D0FAE /* RuntimeTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB2C592020FBD4009D0FAE /* RuntimeTVTests.swift */; };
 		35EB2C5C2020FBD4009D0FAE /* RuntimeTV.h in Headers */ = {isa = PBXBuildFile; fileRef = 35EB2C4E2020FBD4009D0FAE /* RuntimeTV.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35EB2C632020FBE1009D0FAE /* AClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED03052020237E007A941C /* AClass.swift */; };
 		35EB2C642020FBE1009D0FAE /* AFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED03062020237E007A941C /* AFramework.swift */; };
@@ -19,7 +22,6 @@
 		35ED03082020237E007A941C /* AClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED03052020237E007A941C /* AClass.swift */; };
 		35ED03092020237E007A941C /* AFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED03062020237E007A941C /* AFramework.swift */; };
 		35ED030A2020237E007A941C /* Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED03072020237E007A941C /* Runtime.swift */; };
-		35ED030D202023A7007A941C /* SwiftRuntimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED030B202023A7007A941C /* SwiftRuntimeTests.swift */; };
 		35ED030E202023A7007A941C /* ClassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ED030C202023A7007A941C /* ClassTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,11 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		356AB430203DFD9D00116B99 /* FrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkTests.swift; sourceTree = "<group>"; };
 		35EB2C4C2020FBD4009D0FAE /* RuntimeTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RuntimeTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35EB2C4E2020FBD4009D0FAE /* RuntimeTV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeTV.h; sourceTree = "<group>"; };
 		35EB2C4F2020FBD4009D0FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35EB2C542020FBD4009D0FAE /* RuntimeTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuntimeTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		35EB2C592020FBD4009D0FAE /* RuntimeTVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeTVTests.swift; sourceTree = "<group>"; };
 		35EB2C5B2020FBD4009D0FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35ED02DE202022F5007A941C /* Runtime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Runtime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35ED02E1202022F5007A941C /* Runtime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Runtime.h; sourceTree = "<group>"; };
@@ -56,7 +58,6 @@
 		35ED03052020237E007A941C /* AClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AClass.swift; sourceTree = "<group>"; };
 		35ED03062020237E007A941C /* AFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFramework.swift; sourceTree = "<group>"; };
 		35ED03072020237E007A941C /* Runtime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Runtime.swift; sourceTree = "<group>"; };
-		35ED030B202023A7007A941C /* SwiftRuntimeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRuntimeTests.swift; sourceTree = "<group>"; };
 		35ED030C202023A7007A941C /* ClassTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,7 +107,6 @@
 		35EB2C582020FBD4009D0FAE /* RuntimeTVTests */ = {
 			isa = PBXGroup;
 			children = (
-				35EB2C592020FBD4009D0FAE /* RuntimeTVTests.swift */,
 				35EB2C5B2020FBD4009D0FAE /* Info.plist */,
 			);
 			path = RuntimeTVTests;
@@ -147,10 +147,10 @@
 		35ED02EB202022F5007A941C /* RuntimeTests */ = {
 			isa = PBXGroup;
 			children = (
-				35ED030C202023A7007A941C /* ClassTests.swift */,
-				35ED030B202023A7007A941C /* SwiftRuntimeTests.swift */,
-				35ED02EC202022F5007A941C /* RuntimeTests.swift */,
 				35ED02EE202022F5007A941C /* Info.plist */,
+				35ED030C202023A7007A941C /* ClassTests.swift */,
+				35ED02EC202022F5007A941C /* RuntimeTests.swift */,
+				356AB430203DFD9D00116B99 /* FrameworkTests.swift */,
 			);
 			path = RuntimeTests;
 			sourceTree = "<group>";
@@ -354,7 +354,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35EB2C5A2020FBD4009D0FAE /* RuntimeTVTests.swift in Sources */,
+				356AB42F203DFCF900116B99 /* RuntimeTests.swift in Sources */,
+				356AB432203DFD9D00116B99 /* FrameworkTests.swift in Sources */,
+				356AB42D203DFCF400116B99 /* ClassTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,8 +374,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35ED030D202023A7007A941C /* SwiftRuntimeTests.swift in Sources */,
 				35ED02ED202022F5007A941C /* RuntimeTests.swift in Sources */,
+				356AB431203DFD9D00116B99 /* FrameworkTests.swift in Sources */,
 				35ED030E202023A7007A941C /* ClassTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

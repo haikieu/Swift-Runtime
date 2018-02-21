@@ -7,7 +7,13 @@
 //
 
 import XCTest
-@testable import Runtime
+#if os(tvOS)
+    @testable import RuntimeTV
+#else
+    @testable import Runtime
+#endif
+
+
 
 class RuntimeTests: XCTestCase {
     
@@ -21,16 +27,28 @@ class RuntimeTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testRetrievingRuntimeFrameworks() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssertNoThrow(Runtime.environment.frameworks)
+        XCTAssertNoThrow(Runtime.environment.listFrameworks)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testRetrievingRuntimeFrameworksPerformance() { self.measure { _ = Runtime.environment.frameworks } }
+    
+    
+    func testRetrievingRuntimeClasses() {
+        XCTAssertNoThrow(Runtime.environment.classes)
+        XCTAssertNoThrow(Runtime.environment.listClassNames())
     }
+    
+    func testRetrievingRuntimeClassesPerformance() { self.measure { _ = Runtime.environment.classes } }
+    
+    func testRetrievingRuntimeProtocols() {
+        XCTAssertNoThrow(Runtime.environment.protocols)
+        XCTAssertNoThrow(Runtime.environment.listProtocols())
+    }
+    
+    func testRetrievingRuntimeProtocolsPerformance() { self.measure { _ = Runtime.environment.protocols } }
     
 }

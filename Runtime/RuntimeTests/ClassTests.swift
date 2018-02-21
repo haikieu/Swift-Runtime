@@ -7,7 +7,11 @@
 //
 
 import XCTest
-@testable import Runtime
+#if os(tvOS)
+    @testable import RuntimeTV
+#else
+    @testable import Runtime
+#endif
 
 class ClassTests: XCTestCase {
     var cls : AClass!
