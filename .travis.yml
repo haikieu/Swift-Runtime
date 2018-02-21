@@ -17,5 +17,4 @@ deploy:
   skip_cleanup: true
   on:
     repo: haikieu/Swift-Runtime
-    branch: 1.0.0
     tags: true
