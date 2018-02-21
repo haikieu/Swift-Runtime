@@ -87,7 +87,7 @@ public class AClass {
     public fileprivate(set) lazy var methods : [AMethod] = {
         var methods = [AMethod]()
         var methodCount : UInt32 = 0
-        let methodList = class_copyMethodList(runtimeClass, &methodCount)
+        let methodList = class_copyMethodList(runtimeClass, &methodCount) //This does not work for Swift Object.
         defer { methodList?.deallocate(capacity: Int(methodCount)) }
         if let methodList = methodList {
             for i in 0..<Int(methodCount) {

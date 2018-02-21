@@ -13,12 +13,48 @@ import XCTest
     @testable import Runtime
 #endif
 
+protocol MockProtocol : class {
+    
+}
+
+class NSMockClass : NSObject{
+    
+    weak var delegate : MockProtocol?
+    
+    var varStr1 : String
+    var varStr2 : String!
+    var varStr3 : String?
+    
+    override init() {
+        
+        varStr1 = "something"
+        
+        super.init()
+    }
+    
+    func instaceMethod1() {
+        
+    }
+    
+    func instanceMethod2() -> Bool {
+        return false
+    }
+    
+    static func staticMethod() {
+    
+    }
+}
+
 class ClassTests: XCTestCase {
     var cls : AClass!
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        cls = AClass(type(of: self))
+        #if os(tvOS)
+            cls = AClass.from(className: "RuntimeTVTests.NSMockClass")
+        #else
+            cls = AClass.from(className: "RuntimeTests.NSMockClass")
+        #endif
     }
     
     override func tearDown() {
@@ -28,14 +64,18 @@ class ClassTests: XCTestCase {
     }
     
     func testCreateInstanceAtRuntimeStatic() {
-        XCTAssertNoThrow(cls.createInstance())
+        XCTAssertNotNil(cls.createInstance())
+    }
+    
+    func testInvalidClassName() {
+        XCTAssertNil(AClass.from(className: "InValidClassName"))
     }
     
     func testCommons() {
-        XCTAssertNoThrow(cls.runtimeClass)
-        XCTAssertNoThrow(cls.baseClass)
-        XCTAssertNoThrow(cls.protocols)
-        XCTAssertNoThrow(cls.props)
+        XCTAssertNotNil(cls.runtimeClass)
+        XCTAssertNotNil(cls.baseClass)
+        XCTAssertNotNil(cls.protocols)
+        XCTAssertNotNil(cls.props)
     }
     
     func testClassProperties(){
