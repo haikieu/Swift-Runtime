@@ -6,10 +6,11 @@ before_install:
   - brew outdated xctool || brew upgrade xctool
 
 script:
-  - xcodebuild -scheme Runtime -workspace RuntimeDemo.xcworkspace -sdk iphoneos | xcpretty
-  - xcodebuild -scheme Runtime -workspace RuntimeDemo.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8' build test | xcpretty
-  - xcodebuild -scheme RuntimeTV -workspace RuntimeDemo.xcworkspace -sdk appletvos build | xcpretty
-  - xcodebuild -scheme RuntimeTV -workspace RuntimeDemo.xcworkspace -sdk appletvsimulator -destination 'platform=tvOS Simulator,name=Apple TV' build test | xcpretty
+  - env
+  - xcodebuild -scheme Runtime -workspace RuntimeDemo.xcworkspace ONLY_ACTIVE_ARCH=NO -configuration Release -sdk iphoneos clean build | xcpretty
+  - xcodebuild -scheme Runtime -workspace RuntimeDemo.xcworkspace ONLY_ACTIVE_ARCH=YES -configuration Debug -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8' -enableCodeCoverage YES clean build test | xcpretty
+  - xcodebuild -scheme RuntimeTV -workspace RuntimeDemo.xcworkspace ONLY_ACTIVE_ARCH=NO -configuration Release -sdk appletvos clean build | xcpretty
+  - xcodebuild -scheme RuntimeTV -workspace RuntimeDemo.xcworkspace ONLY_ACTIVE_ARCH=YES -configuration Debug -sdk appletvsimulator -destination 'platform=tvOS Simulator,name=Apple TV' -enableCodeCoverage YES clean build test | xcpretty
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash) -t b950ada7-944f-4d80-9474-78be452bb8d5 -J 'Runtime'
+  - bash <(curl -s https://codecov.io/bash) -t b950ada7-944f-4d80-9474-78be452bb8d5 -J 'Runtime RuntimeTV'
