@@ -1,29 +1,42 @@
-language: swift # or objective-c
+language: swift
 osx_image: xcode9.1
-
 env:
   global:
-    - WORKSPACE=RuntimeDemo.xcworkspace
-
+  - WORKSPACE=RuntimeDemo.xcworkspace
 before_install:
-  - brew update || brew update
-  - brew outdated xctool || brew upgrade xctool
-  - brew outdated carthage || brew upgrade carthage
-  
+- brew update || brew update
+- brew outdated xctool || brew upgrade xctool
+- brew outdated carthage || brew upgrade carthage
 script:
-  - env
-  - xcodebuild -version
-  - xcodebuild -showsdks
-  - xcodebuild -scheme Runtime -workspace "${WORKSPACE}" ONLY_ACTIVE_ARCH=NO -configuration Release -sdk iphoneos clean build | xcpretty
-  - xcodebuild -scheme RuntimeTV -workspace "${WORKSPACE}" ONLY_ACTIVE_ARCH=NO -configuration Release -sdk appletvos clean build | xcpretty
-  - xcodebuild -scheme Runtime -workspace "${WORKSPACE}" ONLY_ACTIVE_ARCH=YES -configuration Debug -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8' ENABLE_TESTABILITY=YES -enableCodeCoverage YES build test | xcpretty
-  - xcodebuild -scheme RuntimeTV -workspace "${WORKSPACE}" ONLY_ACTIVE_ARCH=YES -configuration Debug -sdk appletvsimulator -destination 'platform=tvOS Simulator,name=Apple TV' ENABLE_TESTABILITY=YES -enableCodeCoverage YES build test | xcpretty
-
+- env
+- xcodebuild -version
+- xcodebuild -showsdks
+- xcodebuild -scheme Runtime -workspace "${WORKSPACE}" ONLY_ACTIVE_ARCH=NO -configuration
+  Release -sdk iphoneos clean build | xcpretty
+- xcodebuild -scheme RuntimeTV -workspace "${WORKSPACE}" ONLY_ACTIVE_ARCH=NO -configuration
+  Release -sdk appletvos clean build | xcpretty
+- xcodebuild -scheme Runtime -workspace "${WORKSPACE}" ONLY_ACTIVE_ARCH=YES -configuration
+  Debug -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8' ENABLE_TESTABILITY=YES
+  -enableCodeCoverage YES build test | xcpretty
+- xcodebuild -scheme RuntimeTV -workspace "${WORKSPACE}" ONLY_ACTIVE_ARCH=YES -configuration
+  Debug -sdk appletvsimulator -destination 'platform=tvOS Simulator,name=Apple TV'
+  ENABLE_TESTABILITY=YES -enableCodeCoverage YES build test | xcpretty
 after_success:
-  - bash <(curl -s https://codecov.io/bash) -t b950ada7-944f-4d80-9474-78be452bb8d5 -J 'Runtime RuntimeTV'
-
-
+- bash <(curl -s https://codecov.io/bash) -t b950ada7-944f-4d80-9474-78be452bb8d5
+  -J 'Runtime RuntimeTV'
 before_deploy:
-  - carthage build --no-skip-current
-  - carthage archive RuntimeTV
-  - carthage archice Runtime
+- carthage build --no-skip-current
+- carthage archive RuntimeTV
+- carthage archice Runtime
+deploy:
+  provider: releases
+  api_key:
+    secure: E1VZ0pxCoALnRIn39AkXwNSXUuB1YBdG3fp8J+bBvpPIY+5zNaLKyPs8LsGVAf+weRUoj3LN2xW1lEfLkcWdFF60yLsyaGTN56Bzxd1+pYj43T1rO2VwMuK4bzY24TEFyU7MG25qrTSjl2MglM2VlmFJerTzW1NcUXd4MSelDdwZ8MWfNTGE0H6ljCLD6PujCR9+fRtz0RIb547rAeDn3lbUy73J0bzYKivCdmlXPFxfwKIS7cmlxfFmyJPEfw1ymYY7YSG7AFMdpE4+qT1ym7ODnthzZQBQAL0ysfsY32rHO8blaKSwQuvMJ7DccCvCVxsK1gBZsPPSVlcRLmkVF2QWvx0Qk9Vp3NzJyj+kiFqoeEyz8npF0kk/qgpngLepI70DJgPJj5Z00V1A2wgGVd3jw0bjT5gtLqe7qIZwymLIDwFJIDjXMeNsCMJxpQqhSqZJphsRcAhYk8E7BroqIUK055YLCG3S9YJN6E2hivBZzMcrs6h2deiv+rpY5Hj0SO3ebZ3EUDEoUeqO7BrdLGR3um0Ds7H3XiZtkHxG0rnxYIbHR5cIr17q+VrCjJhebOi1p+6sCQFz5bmueWk71SBDuUqz9qd2/mZp7zIE1o3a4QK+g77OdoLAct7yBx9wkBYv1QhVHDHkttsSKLpRB9rorC0OgGbRxFAuAj4hX84=
+  file: 
+	-Runtime.framework.zip
+	-RuntimeTV.framework.zip
+  skip_cleanup: true
+  on:
+    repo: haikieu/Swift-Runtime
+    branch: 1.0.0
+    tags: true
