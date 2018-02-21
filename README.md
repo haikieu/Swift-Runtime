@@ -1,4 +1,4 @@
-# Swift-Runtime-Library [![Build Status](https://travis-ci.org/haikieu/Swift-Runtime.svg?branch=master)](https://travis-ci.org/haikieu/Swift-Runtime) [![codecov](https://codecov.io/gh/haikieu/Swift-Runtime/branch/master/graph/badge.svg)](https://codecov.io/gh/haikieu/Swift-Runtime) [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+# Swift-Runtime-Library [![Build Status](https://travis-ci.org/haikieu/Swift-Runtime.svg?branch=master)](https://travis-ci.org/haikieu/Swift-Runtime) [![codecov](https://codecov.io/gh/haikieu/Swift-Runtime/branch/master/graph/badge.svg)](https://codecov.io/gh/haikieu/Swift-Runtime) [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)  [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/haikieu/Swift-Runtime/master/LICENSE)
 
 ![Swift-Runtime-Library](https://raw.githubusercontent.com/haikieu/Swift-Runtime/master/Diagram1.jpg "Get all frameworks and library at runtime")
 
