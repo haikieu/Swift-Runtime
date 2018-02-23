@@ -43,6 +43,10 @@ class NSMockClass : NSObject{
     static func staticMethod() {
     
     }
+    
+    static func staticMethod2() {
+        
+    }
 }
 
 class ClassTests: XCTestCase {
@@ -61,6 +65,10 @@ class ClassTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         cls = nil
         super.tearDown()
+    }
+    
+    func testInstantiate() {
+        XCTAssertNotNil(AClass.instantiate(from: NSMockClass.self))
     }
     
     func testCreateInstanceAtRuntimeStatic() {
@@ -84,4 +92,54 @@ class ClassTests: XCTestCase {
         XCTAssert(cls.ivars.count > 0)
         XCTAssert(cls.methods.count > 0)
     }
+    
+    func testMethod() {
+        guard let aMethod = cls.methods.first else {
+            XCTFail()
+            return
+        }
+        
+        XCTAssertTrue(aMethod.isValid)
+        XCTAssertNotNil(aMethod.method)
+        XCTAssertNotNil(aMethod.selector)
+        XCTAssertNotNil(aMethod.name)
+        XCTAssertNotNil(aMethod.implementation)
+        XCTAssertNotNil(aMethod.arguments)
+        XCTAssertNotNil(aMethod.returnType)
+        XCTAssertNotNil(aMethod.typeEncoding)
+    }
+    
+    func testMethodImplementation() {
+        guard let aIMP = cls.methods.last?.implementation else {
+            XCTFail()
+            return
+        }
+        XCTAssertNotNil(aIMP.imp)
+        XCTAssertNoThrow(aIMP.block)
+    }
+    
+    func testSelector() {
+        guard let aSelector = cls.methods.first?.selector else {
+            XCTFail()
+            return
+        }
+        
+        guard let aSelector2 = cls.methods.last?.selector else {
+            XCTFail()
+            return
+        }
+        
+        XCTAssertTrue(aSelector.isValid)
+        XCTAssertNotNil(aSelector.name)
+        XCTAssertNotNil(aSelector.sel)
+        XCTAssertTrue(aSelector != aSelector2)
+    }
+    
+//    func testProp() {
+//        guard let aProp = cls.props.first else {
+//            XCTFail()
+//            return
+//        }
+//
+//    }
 }

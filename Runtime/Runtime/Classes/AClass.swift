@@ -26,7 +26,14 @@ import Foundation
 
 public class AClass {
     
+    ///There's several ways to get AnyClass type
+    /// 1) Inside of a certain class, to get AnyClass use  type(of: Self)
+    /// 2) Use class directly: For example: UIViewController.self
     public init(_ runtimeClass : AnyClass) { self.runtimeClass = runtimeClass }
+    
+    ///There's several ways to get a className string
+    /// NSClassFromString(....)
+    /// String(describe: )
     open class func from(className: String) -> AClass? {
         guard let cls = NSClassFromString(className) else { return nil }
         return AClass(cls)
@@ -126,7 +133,7 @@ public class AMethod {
     public fileprivate(set) lazy var selector : ASelector = { return ASelector(method_getName(method))}()
     public fileprivate(set) lazy var name : String = { return selector.name}()
     public fileprivate(set) lazy var isValid : Bool = { return selector.isValid}()
-    public fileprivate(set) lazy var implementation : IMP = { return method_getImplementation(method)}()
+    public fileprivate(set) lazy var implementation : AIMP = { return AIMP(method_getImplementation(method)) }()
     
     public fileprivate(set) lazy var arguments : [String] = {
         var arguments = [String]()

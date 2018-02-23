@@ -31,24 +31,20 @@ class RuntimeTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         XCTAssertNoThrow(Runtime.environment.frameworks)
-        XCTAssertNoThrow(Runtime.environment.listFrameworks)
+        XCTAssertNoThrow(Runtime.environment.listFrameworks())
     }
-    
-    func testRetrievingRuntimeFrameworksPerformance() { self.measure { _ = Runtime.environment.frameworks } }
-    
     
     func testRetrievingRuntimeClasses() {
         XCTAssertNoThrow(Runtime.environment.classes)
         XCTAssertNoThrow(Runtime.environment.listClassNames())
     }
     
-    func testRetrievingRuntimeClassesPerformance() { self.measure { _ = Runtime.environment.classes } }
-    
     func testRetrievingRuntimeProtocols() {
         XCTAssertNoThrow(Runtime.environment.protocols)
         XCTAssertNoThrow(Runtime.environment.listProtocols())
     }
     
-    func testRetrievingRuntimeProtocolsPerformance() { self.measure { _ = Runtime.environment.protocols } }
-    
+    func testComparingProtocols() {
+        XCTAssert(Runtime.environment.protocols.first != Runtime.environment.protocols.last)
+    }
 }
